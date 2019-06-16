@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
 import Layout from "../components/Layout";
+import fetch from "isomorphic-fetch";
 
 const Index = () => {
   return (

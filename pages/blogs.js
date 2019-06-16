@@ -64,7 +64,9 @@ const Blogs = ({ data }) => {
 Blogs.getInitialProps = async ({ query }) => {
   console.log(`${query.searchTerm}`);
   let url = `https://radio.rte.ie/radio1highlights/wp-json/wp/v2/posts/`;
-
+  if (query.searchTerm) {
+    url = `https://radio.rte.ie/radio1highlights/wp-json/wp/v2/posts?search=${query.searchTerm}`;
+  }
   const response = await fetch(url);
   const data = await response.json();
   console.log(`got ${data.length} records`);

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1792,7 +1792,7 @@ var Blogs = function Blogs(_ref) {
     }, "Play"));
   }))), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_3___default.a, {
     id: "3496881397"
-  }, "p.jsx-3496881397{font-size:18px;font-family:\"Comic Sans\";color:blue;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kb3VnYmFudmlsbGUvaGFja2VyLW5leHQvcGFnZXMvYmxvZ3MuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBbURTLEFBRzRCLGVBQ1UseUJBQ2QsV0FDYiIsImZpbGUiOiIvVXNlcnMvZG91Z2JhbnZpbGxlL2hhY2tlci1uZXh0L3BhZ2VzL2Jsb2dzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgdXNlU3RhdGUgfSBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCBSb3V0ZXIgZnJvbSBcIm5leHQvcm91dGVyXCI7XG5pbXBvcnQgTGluayBmcm9tIFwibmV4dC9saW5rXCI7XG5pbXBvcnQgSGVhZCBmcm9tIFwibmV4dC9oZWFkXCI7XG5pbXBvcnQgTGF5b3V0IGZyb20gXCIuLi9jb21wb25lbnRzL0xheW91dFwiO1xuaW1wb3J0IGZldGNoIGZyb20gXCJpc29tb3JwaGljLWZldGNoXCI7XG5cbmNvbnN0IEJsb2dzID0gKHsgZGF0YSB9KSA9PiB7XG4gIGNvbnN0IFtzZWFyY2hRdWVyeSwgc2V0U2VhcmNoUXVlcnldID0gdXNlU3RhdGUoXCJ0dWJyaWR5XCIpO1xuICBjb25zdCBzZWFyY2hGb3JtID0gKCkgPT4gKFxuICAgIDxmb3JtIG9uU3VibWl0PXtoYW5kbGVTdWJtaXR9PlxuICAgICAgPGlucHV0IHR5cGU9XCJ0ZXh0XCIgdmFsdWU9e3NlYXJjaFF1ZXJ5fSBvbkNoYW5nZT17aGFuZGxlVGV4dENoYW5nZX0gLz5cbiAgICA8L2Zvcm0+XG4gICk7XG5cbiAgY29uc3QgaGFuZGxlVGV4dENoYW5nZSA9IGUgPT4ge1xuICAgIHNldFNlYXJjaFF1ZXJ5KGUudGFyZ2V0LnZhbHVlKTtcbiAgfTtcblxuICBjb25zdCBoYW5kbGVTdWJtaXQgPSBlID0+IHtcbiAgICBlLnByZXZlbnREZWZhdWx0KCk7XG4gICAgUm91dGVyLnB1c2goYC9ibG9ncy8/c2VhcmNoVGVybT0ke3NlYXJjaFF1ZXJ5fWApO1xuICB9O1xuXG4gIHJldHVybiAoXG4gICAgPExheW91dCB0aXRsZT1cIkJsb2dzXCIgZm9vdGVyPXtgQ29weXJpZ2h0ICR7bmV3IERhdGUoKS5nZXRGdWxsWWVhcigpfWB9PlxuICAgICAgPEhlYWQ+XG4gICAgICAgIDx0aXRsZT5CbG9nczwvdGl0bGU+XG4gICAgICA8L0hlYWQ+XG4gICAgICB7c2VhcmNoRm9ybSgpfVxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJncmlkLWNvbnRhaW5lclwiPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQteCBncmlkLW1hcmdpbi14XCI+XG4gICAgICAgICAge2RhdGEubWFwKChiLCBpKSA9PiAoXG4gICAgICAgICAgICA8ZGl2IGtleT17Yi5pZH0gY2xhc3NOYW1lPVwibGFyZ2UtMTJcIj5cbiAgICAgICAgICAgICAgPExpbmsgYXM9e2AvYmxvZy8ke2IuaWR9YH0gaHJlZj17YC9ibG9nLz9pZD0ke2IuaWR9YH0+XG4gICAgICAgICAgICAgICAgPGg0PntiLnRpdGxlLnJlbmRlcmVkfTwvaDQ+XG4gICAgICAgICAgICAgIDwvTGluaz5cbiAgICAgICAgICAgICAgPGJ1dHRvblxuICAgICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHtcbiAgICAgICAgICAgICAgICAgIGxldCBhdWRpb1BMYXllciA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKFwiYXVkaW9QbGF5ZXJcIik7XG4gICAgICAgICAgICAgICAgICBhdWRpb1BMYXllci5zZXRBdHRyaWJ1dGUoXCJzcmNcIiwgYi5ydGVfbXAzX2F1ZGlvKTtcbiAgICAgICAgICAgICAgICAgIGF1ZGlvUExheWVyLnBsYXkoKTtcbiAgICAgICAgICAgICAgICB9fVxuICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgUGxheVxuICAgICAgICAgICAgICA8L2J1dHRvbj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICkpfVxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuICAgICAgPHN0eWxlIGpzeD5cbiAgICAgICAge2BcbiAgICAgICAgICBwIHtcbiAgICAgICAgICAgIGZvbnQtc2l6ZTogMThweDtcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiBcIkNvbWljIFNhbnNcIjtcbiAgICAgICAgICAgIGNvbG9yOiBibHVlO1xuICAgICAgICAgIH1cbiAgICAgICAgYH1cbiAgICAgIDwvc3R5bGU+XG4gICAgPC9MYXlvdXQ+XG4gICk7XG59O1xuXG5CbG9ncy5nZXRJbml0aWFsUHJvcHMgPSBhc3luYyAoeyBxdWVyeSB9KSA9PiB7XG4gIGNvbnNvbGUubG9nKGAke3F1ZXJ5LnNlYXJjaFRlcm19YCk7XG4gIGxldCB1cmwgPSBgaHR0cHM6Ly9yYWRpby5ydGUuaWUvcmFkaW8xaGlnaGxpZ2h0cy93cC1qc29uL3dwL3YyL3Bvc3RzL2A7XG5cbiAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaCh1cmwpO1xuICBjb25zdCBkYXRhID0gYXdhaXQgcmVzcG9uc2UuanNvbigpO1xuICBjb25zb2xlLmxvZyhgZ290ICR7ZGF0YS5sZW5ndGh9IHJlY29yZHNgKTtcbiAgcmV0dXJuIHtcbiAgICBkYXRhXG4gIH07XG59O1xuXG5leHBvcnQgZGVmYXVsdCBCbG9ncztcbiJdfQ== */\n/*@ sourceURL=/Users/dougbanville/hacker-next/pages/blogs.js */"));
+  }, "p.jsx-3496881397{font-size:18px;font-family:\"Comic Sans\";color:blue;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kb3VnYmFudmlsbGUvaGFja2VyLW5leHQvcGFnZXMvYmxvZ3MuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBbURTLEFBRzRCLGVBQ1UseUJBQ2QsV0FDYiIsImZpbGUiOiIvVXNlcnMvZG91Z2JhbnZpbGxlL2hhY2tlci1uZXh0L3BhZ2VzL2Jsb2dzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgdXNlU3RhdGUgfSBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCBSb3V0ZXIgZnJvbSBcIm5leHQvcm91dGVyXCI7XG5pbXBvcnQgTGluayBmcm9tIFwibmV4dC9saW5rXCI7XG5pbXBvcnQgSGVhZCBmcm9tIFwibmV4dC9oZWFkXCI7XG5pbXBvcnQgTGF5b3V0IGZyb20gXCIuLi9jb21wb25lbnRzL0xheW91dFwiO1xuaW1wb3J0IGZldGNoIGZyb20gXCJpc29tb3JwaGljLWZldGNoXCI7XG5cbmNvbnN0IEJsb2dzID0gKHsgZGF0YSB9KSA9PiB7XG4gIGNvbnN0IFtzZWFyY2hRdWVyeSwgc2V0U2VhcmNoUXVlcnldID0gdXNlU3RhdGUoXCJ0dWJyaWR5XCIpO1xuICBjb25zdCBzZWFyY2hGb3JtID0gKCkgPT4gKFxuICAgIDxmb3JtIG9uU3VibWl0PXtoYW5kbGVTdWJtaXR9PlxuICAgICAgPGlucHV0IHR5cGU9XCJ0ZXh0XCIgdmFsdWU9e3NlYXJjaFF1ZXJ5fSBvbkNoYW5nZT17aGFuZGxlVGV4dENoYW5nZX0gLz5cbiAgICA8L2Zvcm0+XG4gICk7XG5cbiAgY29uc3QgaGFuZGxlVGV4dENoYW5nZSA9IGUgPT4ge1xuICAgIHNldFNlYXJjaFF1ZXJ5KGUudGFyZ2V0LnZhbHVlKTtcbiAgfTtcblxuICBjb25zdCBoYW5kbGVTdWJtaXQgPSBlID0+IHtcbiAgICBlLnByZXZlbnREZWZhdWx0KCk7XG4gICAgUm91dGVyLnB1c2goYC9ibG9ncy8/c2VhcmNoVGVybT0ke3NlYXJjaFF1ZXJ5fWApO1xuICB9O1xuXG4gIHJldHVybiAoXG4gICAgPExheW91dCB0aXRsZT1cIkJsb2dzXCIgZm9vdGVyPXtgQ29weXJpZ2h0ICR7bmV3IERhdGUoKS5nZXRGdWxsWWVhcigpfWB9PlxuICAgICAgPEhlYWQ+XG4gICAgICAgIDx0aXRsZT5CbG9nczwvdGl0bGU+XG4gICAgICA8L0hlYWQ+XG4gICAgICB7c2VhcmNoRm9ybSgpfVxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJncmlkLWNvbnRhaW5lclwiPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQteCBncmlkLW1hcmdpbi14XCI+XG4gICAgICAgICAge2RhdGEubWFwKChiLCBpKSA9PiAoXG4gICAgICAgICAgICA8ZGl2IGtleT17Yi5pZH0gY2xhc3NOYW1lPVwibGFyZ2UtMTJcIj5cbiAgICAgICAgICAgICAgPExpbmsgYXM9e2AvYmxvZy8ke2IuaWR9YH0gaHJlZj17YC9ibG9nLz9pZD0ke2IuaWR9YH0+XG4gICAgICAgICAgICAgICAgPGg0PntiLnRpdGxlLnJlbmRlcmVkfTwvaDQ+XG4gICAgICAgICAgICAgIDwvTGluaz5cbiAgICAgICAgICAgICAgPGJ1dHRvblxuICAgICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHtcbiAgICAgICAgICAgICAgICAgIGxldCBhdWRpb1BMYXllciA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKFwiYXVkaW9QbGF5ZXJcIik7XG4gICAgICAgICAgICAgICAgICBhdWRpb1BMYXllci5zZXRBdHRyaWJ1dGUoXCJzcmNcIiwgYi5ydGVfbXAzX2F1ZGlvKTtcbiAgICAgICAgICAgICAgICAgIGF1ZGlvUExheWVyLnBsYXkoKTtcbiAgICAgICAgICAgICAgICB9fVxuICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgUGxheVxuICAgICAgICAgICAgICA8L2J1dHRvbj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICkpfVxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuICAgICAgPHN0eWxlIGpzeD5cbiAgICAgICAge2BcbiAgICAgICAgICBwIHtcbiAgICAgICAgICAgIGZvbnQtc2l6ZTogMThweDtcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiBcIkNvbWljIFNhbnNcIjtcbiAgICAgICAgICAgIGNvbG9yOiBibHVlO1xuICAgICAgICAgIH1cbiAgICAgICAgYH1cbiAgICAgIDwvc3R5bGU+XG4gICAgPC9MYXlvdXQ+XG4gICk7XG59O1xuXG5CbG9ncy5nZXRJbml0aWFsUHJvcHMgPSBhc3luYyAoeyBxdWVyeSB9KSA9PiB7XG4gIGNvbnNvbGUubG9nKGAke3F1ZXJ5LnNlYXJjaFRlcm19YCk7XG4gIGxldCB1cmwgPSBgaHR0cHM6Ly9yYWRpby5ydGUuaWUvcmFkaW8xaGlnaGxpZ2h0cy93cC1qc29uL3dwL3YyL3Bvc3RzL2A7XG4gIGlmIChxdWVyeS5zZWFyY2hUZXJtKSB7XG4gICAgdXJsID0gYGh0dHBzOi8vcmFkaW8ucnRlLmllL3JhZGlvMWhpZ2hsaWdodHMvd3AtanNvbi93cC92Mi9wb3N0cz9zZWFyY2g9JHtxdWVyeS5zZWFyY2hUZXJtfWA7XG4gIH1cbiAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaCh1cmwpO1xuICBjb25zdCBkYXRhID0gYXdhaXQgcmVzcG9uc2UuanNvbigpO1xuICBjb25zb2xlLmxvZyhgZ290ICR7ZGF0YS5sZW5ndGh9IHJlY29yZHNgKTtcbiAgcmV0dXJuIHtcbiAgICBkYXRhXG4gIH07XG59O1xuXG5leHBvcnQgZGVmYXVsdCBCbG9ncztcbiJdfQ== */\n/*@ sourceURL=/Users/dougbanville/hacker-next/pages/blogs.js */"));
 };
 
 Blogs.getInitialProps =
@@ -1809,22 +1809,27 @@ function () {
             query = _ref2.query;
             console.log("".concat(query.searchTerm));
             url = "https://radio.rte.ie/radio1highlights/wp-json/wp/v2/posts/";
-            _context.next = 5;
+
+            if (query.searchTerm) {
+              url = "https://radio.rte.ie/radio1highlights/wp-json/wp/v2/posts?search=".concat(query.searchTerm);
+            }
+
+            _context.next = 6;
             return isomorphic_fetch__WEBPACK_IMPORTED_MODULE_9___default()(url);
 
-          case 5:
+          case 6:
             response = _context.sent;
-            _context.next = 8;
+            _context.next = 9;
             return response.json();
 
-          case 8:
+          case 9:
             data = _context.sent;
             console.log("got ".concat(data.length, " records"));
             return _context.abrupt("return", {
               data: data
             });
 
-          case 11:
+          case 12:
           case "end":
             return _context.stop();
         }
@@ -1841,7 +1846,7 @@ function () {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/blogs.js ***!
   \******************************/

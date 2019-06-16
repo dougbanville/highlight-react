@@ -10751,7 +10751,7 @@ var Error = function Error(_ref) {
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F_error&absolutePagePath=%2FUsers%2Fdougbanville%2Fhacker-next%2Fpages%2F_error.js ***!
   \********************************************************************************************************************************/
@@ -10774,5 +10774,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=_error.js.map
