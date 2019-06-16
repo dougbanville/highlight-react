@@ -1,0 +1,16 @@
+.my-nav {
+  background: black;
+  color: white;
+  height: 80px;
+}
+.my-nav a {
+  color: white;
+}
+.staticDiv {
+  position: fixed;
+  height: 60px;
+  background: indigo;
+  color: white;
+  bottom: 0px;
+  width: 100%;
+}

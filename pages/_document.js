@@ -1,0 +1,30 @@
+import Document, { Html, Head, Main, NextScript } from "next/document";
+
+class MyDocument extends Document {
+  render() {
+    return (
+      <html land="en">
+        <head>
+          <meta charSet="UTF-8" />
+          <meta name="author" content="Doug Banville" />
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.min.css"
+            integrity="sha256-xpOKVlYXzQ3P03j397+jWFZLMBXLES3IiryeClgU5og="
+            crossOrigin="anonymous"
+          />
+          <link rel="stylesheet" href="/static/styles.css" />
+        </head>
+
+        <body>
+          <div className="staticDiv" id="static">
+            <audio id="audioPlayer" controls />
+          </div>
+          <Main />
+          <NextScript />
+        </body>
+      </html>
+    );
+  }
+}
+export default MyDocument;
