@@ -32,7 +32,7 @@ const Blogs = ({ data }) => {
       <div className="grid-container">
         <div className="grid-x grid-margin-x">
           {data.map((b, i) => (
-            <div key={b.id} className="cell medium-6 article">
+            <div key={b.id} className="cell medium-6 small-12 article">
               <img src={b.better_featured_image.source_url} />
               <div className="entry-wrap">
                 <Link as={`/blog/${b.id}`} href={`/blog/?id=${b.id}`}>
