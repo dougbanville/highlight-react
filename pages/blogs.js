@@ -4,6 +4,7 @@ import Link from "next/link";
 import Head from "next/head";
 import Layout from "../components/Layout";
 import fetch from "isomorphic-fetch";
+import ReactHtmlParser from "react-html-parser";
 
 const Blogs = ({ data }) => {
   const [searchQuery, setSearchQuery] = useState("tubridy");
@@ -31,10 +32,16 @@ const Blogs = ({ data }) => {
       <div className="grid-container">
         <div className="grid-x grid-margin-x">
           {data.map((b, i) => (
-            <div key={b.id} className="large-12">
-              <Link as={`/blog/${b.id}`} href={`/blog/?id=${b.id}`}>
-                <h4>{b.title.rendered}</h4>
-              </Link>
+            <div key={b.id} className="cell medium-6 article">
+              <img src={b.better_featured_image.source_url} />
+              <div className="entry-wrap">
+                <Link as={`/blog/${b.id}`} href={`/blog/?id=${b.id}`}>
+                  <h4>
+                    <span className="subheader">{ReactHtmlParser(b.acf.sub_heading)}</span> /{" "}
+                    {ReactHtmlParser(b.title.rendered)}
+                  </h4>
+                </Link>
+              </div>
               <button
                 onClick={() => {
                   let audioPLayer = document.getElementById("audioPlayer");
@@ -70,6 +77,7 @@ Blogs.getInitialProps = async ({ query }) => {
   const response = await fetch(url);
   const data = await response.json();
   console.log(`got ${data.length} records`);
+  console.log(data);
   return {
     data
   };

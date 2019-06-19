@@ -13,6 +13,14 @@ class MyDocument extends Document {
             integrity="sha256-xpOKVlYXzQ3P03j397+jWFZLMBXLES3IiryeClgU5og="
             crossOrigin="anonymous"
           />
+          <link
+            rel="stylesheet"
+            id="tp-open-sans-css"
+            href="https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C700%2C800&amp;ver=4.9.10"
+            type="text/css"
+            media="all"
+          />
+          <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
           <link rel="stylesheet" href="/static/styles.css" />
         </head>
 

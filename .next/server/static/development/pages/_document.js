@@ -2133,6 +2133,15 @@ function (_Document) {
         crossOrigin: "anonymous"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "stylesheet",
+        id: "tp-open-sans-css",
+        href: "https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C700%2C800&ver=4.9.10",
+        type: "text/css",
+        media: "all"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
+        href: "https://fonts.googleapis.com/css?family=Montserrat&display=swap",
+        rel: "stylesheet"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
+        rel: "stylesheet",
         href: "/static/styles.css"
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "staticDiv",

@@ -1,3 +1,6 @@
+body {
+  background: #f3f3f3;
+}
 .my-nav {
   background: black;
   color: white;
@@ -13,4 +16,23 @@
   color: white;
   bottom: 0px;
   width: 100%;
+}
+h1,
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.subheader {
+  color: #559cce;
+}
+.article {
+  background: white;
+  border: 0px solid black;
+  margin-bottom: 2em;
+  box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.135);
+  border-radius: 4px;
+}
+.entry-wrap {
+  padding: 6.75% 7.25%;
 }
