@@ -2143,6 +2143,8 @@ function (_Document) {
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "stylesheet",
         href: "/static/styles.css"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("script", {
+        src: "https://kit.fontawesome.com/e25e50b708.js"
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "staticDiv",
         id: "static"

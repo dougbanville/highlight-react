@@ -22,6 +22,7 @@ class MyDocument extends Document {
           />
           <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
           <link rel="stylesheet" href="/static/styles.css" />
+          <script src="https://kit.fontawesome.com/e25e50b708.js" />
         </head>
 
         <body>

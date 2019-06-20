@@ -5,6 +5,7 @@ import Head from "next/head";
 import Layout from "../components/Layout";
 import fetch from "isomorphic-fetch";
 import ReactHtmlParser from "react-html-parser";
+import PlayButton from "../components/PlayButton";
 
 const Blogs = ({ data }) => {
   const [searchQuery, setSearchQuery] = useState("tubridy");
@@ -23,10 +24,14 @@ const Blogs = ({ data }) => {
     Router.push(`/blogs/?searchTerm=${searchQuery}`);
   };
 
+  const [playerStatus, setPlayerStatus] = useState("player");
+
+  //let playing = false;
+
   return (
     <Layout title="Blogs" footer={`Copyright ${new Date().getFullYear()}`}>
       <Head>
-        <title>Blogs</title>
+        <title>Blogs {playerStatus}</title>
       </Head>
       {searchForm()}
       <div className="grid-container">
@@ -42,14 +47,18 @@ const Blogs = ({ data }) => {
                   </h4>
                 </Link>
               </div>
+              {b.id === playerStatus && "playing"}
+              <PlayButton id={b.id} audioUrl={b.rte_mp3_audio} />
               <button
+                className="button"
                 onClick={() => {
-                  let audioPLayer = document.getElementById("audioPlayer");
-                  audioPLayer.setAttribute("src", b.rte_mp3_audio);
-                  audioPLayer.play();
+                  let audioPlayer = document.getElementById("audioPlayer");
+                  setPlayerStatus(b.id);
+                  audioPlayer.setAttribute("src", b.rte_mp3_audio);
+                  audioPlayer.play();
                 }}
               >
-                Play
+                <i className="fas fa-play" /> Play {playerStatus}
               </button>
             </div>
           ))}
@@ -69,7 +78,6 @@ const Blogs = ({ data }) => {
 };
 
 Blogs.getInitialProps = async ({ query }) => {
-  console.log(`${query.searchTerm}`);
   let url = `https://radio.rte.ie/radio1highlights/wp-json/wp/v2/posts/`;
   if (query.searchTerm) {
     url = `https://radio.rte.ie/radio1highlights/wp-json/wp/v2/posts?search=${query.searchTerm}`;

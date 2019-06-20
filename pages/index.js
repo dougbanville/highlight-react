@@ -14,7 +14,7 @@ const Index = () => {
       <Link href="/about">
         <a style={{ color: "red" }}>About</a>
       </Link>
-      <p>Hello Fuck Face</p>
+      <p>Hello World</p>
       <style jsx>
         {`
           p {
