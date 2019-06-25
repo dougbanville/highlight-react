@@ -5,7 +5,7 @@ import Head from "next/head";
 import Layout from "../components/Layout";
 import fetch from "isomorphic-fetch";
 import ReactHtmlParser from "react-html-parser";
-import PlayButton from "../components/PlayButton";
+import AudioButton from "../components/AudioButton";
 
 const Blogs = ({ data }) => {
   const [value, setValue] = useState({
@@ -14,15 +14,17 @@ const Blogs = ({ data }) => {
     audioPlaying: false
   });
 
-  const { text, audioId } = value;
+  const { text, audioId, audioPlaying } = value;
 
   const handleChange = name => e => {
     //setSearchQuery(e.target.value);
     console.log("cha" + e.target.value);
     setValue({ ...value, [name]: e.target.value });
   };
-  const [audioPlaying, setAudioPlaying] = useState("NOT SET");
   const [searchQuery, setSearchQuery] = useState("tubridy");
+
+  const [audioPlayer, setAudioPlayer] = useState("null");
+
   const searchForm = () => (
     <form onSubmit={handleSubmit}>
       <input type="text" value={text} onChange={handleChange("text")} />
@@ -50,7 +52,7 @@ const Blogs = ({ data }) => {
   if (process.browser) {
     const audioPlayer = document.getElementById("audioPlayer");
     audioPlayer.onplay = e => {
-      alert("fuck yeah");
+      setValue({ ...value, ["audioPlaying"]: "true" });
     };
   }
 
@@ -82,8 +84,7 @@ const Blogs = ({ data }) => {
                   </h4>
                 </Link>
               </div>
-              {b.id === playerStatus && "playing"}
-              <PlayButton id={b.id} audioUrl={b.rte_mp3_audio} playing={audioId} />
+
               <button
                 className="button"
                 value={b.id}
@@ -94,8 +95,9 @@ const Blogs = ({ data }) => {
                   audioPlayer.play();
                 }}
               >
-                <i className="fas fa-play" /> Play! {playerStatus}
+                <i className="fas fa-play" /> Play! {b.id === audioPlaying && "playing"} {playerStatus} {audioPlaying}
               </button>
+              <AudioButton id={b.id} audioUrl={b.rte_mp3_audio} />
             </div>
           ))}
         </div>

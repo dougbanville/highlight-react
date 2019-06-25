@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import AudioPlayer from "../components/AudioPlayer";
 
 class MyDocument extends Document {
   render() {
@@ -27,7 +28,7 @@ class MyDocument extends Document {
 
         <body>
           <div className="staticDiv" id="static">
-            <audio id="audioPlayer" controls />
+            <AudioPlayer />
           </div>
           <Main />
           <NextScript />
