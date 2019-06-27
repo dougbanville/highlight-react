@@ -1,6 +1,7 @@
 import React from "react";
 import App, { Container } from "next/app";
 import AudioContext from "../components/AudioContext";
+import AudioPlayer from "../components/AudioPlayer";
 
 class MyApp extends App {
   state = {
@@ -22,39 +23,46 @@ class MyApp extends App {
     //!Setup an event listener for your audio player
     const audioPlayer = document.getElementById(`audioPlayer`);
 
-    this.setState({
-      audioPlayer: audioPlayer,
-      isPlaying: "nope"
-    });
-
-    audioPlayer.onplay = () => {
+    audioPlayer.ontimeupdate = () => {
+      console.log(`playing`);
       this.setState({
-        isPlaying: "true"
+        isPlaying: true
       });
     };
     audioPlayer.onpause = () => {
+      console.log(`pausing`);
       this.setState({
-        isPlaying: "false"
+        isPlaying: false
       });
     };
   };
 
   playAudio = audio => {
-    //this.
+    const audioPlayer = document.getElementById(`audioPlayer`);
+
     let audioProps = audio.target.value.split(",");
     let audioId = audioProps[0];
     let audioUrl = audioProps[1];
-    console.log(`${audioId} - ${audioUrl}`);
 
-    this.state.audioPlayer.setAttribute("src", audioUrl);
-    //audioPlayer.play();
+    audioPlayer.setAttribute("src", audioUrl);
 
     this.setState({
-      audioId: audioId
+      audioId: audioId,
+      isPlaying: true
     });
 
-    this.state.audioPlayer.play();
+    audioPlayer.play();
   };
+  pauseAudio() {
+    const audioPlayer = document.getElementById(`audioPlayer`);
+
+    audioPlayer.pause();
+  }
+  resumeAudio() {
+    const audioPlayer = document.getElementById(`audioPlayer`);
+
+    audioPlayer.play();
+  }
 
   render() {
     const { Component, pageProps } = this.props;
@@ -62,10 +70,20 @@ class MyApp extends App {
     return (
       <Container>
         <AudioContext.Provider
-          value={{ audioId: this.state.audioId, playAudio: this.playAudio, audioPlayer: this.state.audioPlayer }}
+          value={{
+            audioId: this.state.audioId,
+            playAudio: this.playAudio,
+            audioPlayer: this.state.audioPlayer,
+            pauseAudio: this.pauseAudio,
+            isPlaying: this.state.isPlaying,
+            resumeAudio: this.resumeAudio
+          }}
         >
           <Component {...pageProps} />
         </AudioContext.Provider>
+        <div className="staticDiv" id="static">
+          <AudioPlayer />
+        </div>
       </Container>
     );
   }

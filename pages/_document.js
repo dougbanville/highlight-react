@@ -27,9 +27,6 @@ class MyDocument extends Document {
         </head>
 
         <body>
-          <div className="staticDiv" id="static">
-            <AudioPlayer />
-          </div>
           <Main />
           <NextScript />
         </body>

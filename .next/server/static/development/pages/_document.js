@@ -2158,6 +2158,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var _jsxFileName = "/Users/dougbanville/hacker-next/pages/_document.js";
 
 
 
@@ -2177,35 +2178,96 @@ function (_Document) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("html", {
-        land: "en"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("head", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
-        charSet: "UTF-8"
+        land: "en",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 7
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("head", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 8
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
+        charSet: "UTF-8",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9
+        },
+        __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
         name: "author",
-        content: "Doug Banville"
+        content: "Doug Banville",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        },
+        __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "stylesheet",
         href: "https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.min.css",
         integrity: "sha256-xpOKVlYXzQ3P03j397+jWFZLMBXLES3IiryeClgU5og=",
-        crossOrigin: "anonymous"
+        crossOrigin: "anonymous",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11
+        },
+        __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "stylesheet",
         id: "tp-open-sans-css",
         href: "https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C700%2C800&ver=4.9.10",
         type: "text/css",
-        media: "all"
+        media: "all",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        },
+        __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         href: "https://fonts.googleapis.com/css?family=Montserrat&display=swap",
-        rel: "stylesheet"
+        rel: "stylesheet",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
+        },
+        __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "stylesheet",
-        href: "/static/styles.css"
+        href: "/static/styles.css",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        },
+        __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("script", {
-        src: "https://kit.fontawesome.com/e25e50b708.js"
-      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "staticDiv",
-        id: "static"
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_AudioPlayer__WEBPACK_IMPORTED_MODULE_7__["default"], null)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_6__["Main"], null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_6__["NextScript"], null)));
+        src: "https://kit.fontawesome.com/e25e50b708.js",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("body", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_6__["Main"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_6__["NextScript"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31
+        },
+        __self: this
+      })));
     }
   }]);
 

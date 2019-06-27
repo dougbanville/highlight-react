@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { withRouter } from "next/router";
 import Router from "next/router";
 import Link from "next/link";
 import Head from "next/head";
@@ -6,10 +7,11 @@ import Layout from "../components/Layout";
 import fetch from "isomorphic-fetch";
 import ReactHtmlParser from "react-html-parser";
 import AudioButton from "../components/AudioButton";
+import PostDetail from "../components/PostDetail";
 
 const Blogs = ({ data }) => {
   const [value, setValue] = useState({
-    text: "tubridy!",
+    text: "",
     audioId: "NOt set",
     audioPlaying: false
   });
@@ -27,7 +29,7 @@ const Blogs = ({ data }) => {
 
   const searchForm = () => (
     <form onSubmit={handleSubmit}>
-      <input type="text" value={text} onChange={handleChange("text")} />
+      <input type="text" value={text} onChange={handleChange("text")} placeholder="search" />
     </form>
   );
 
@@ -43,20 +45,10 @@ const Blogs = ({ data }) => {
   };
 
   const playFunction = e => {
-    console.log(e.target.value);
     setValue({ ...value, [audioId]: e.target.value });
   };
 
   const [playerStatus, setPlayerStatus] = useState("player");
-
-  if (process.browser) {
-    const audioPlayer = document.getElementById("audioPlayer");
-    audioPlayer.onplay = e => {
-      setValue({ ...value, ["audioPlaying"]: "true" });
-    };
-  }
-
-  //let playing = false;
 
   return (
     <Layout title="Blogs" footer={`Copyright ${new Date().getFullYear()}`}>
@@ -65,9 +57,7 @@ const Blogs = ({ data }) => {
       </Head>
       <div className="grid-container">
         <div className="grid-x grid-margin-x">
-          <div className="medium-12">
-            {searchForm()} {audioId}
-          </div>
+          <div className="medium-12">{searchForm()}</div>
         </div>
       </div>
 
@@ -75,29 +65,12 @@ const Blogs = ({ data }) => {
         <div className="grid-x grid-margin-x">
           {data.map((b, i) => (
             <div key={b.id} className="cell medium-6 small-12 article">
-              <img src={b.better_featured_image.source_url} />
-              <div className="entry-wrap">
+              <PostDetail post={b} />
+              <div>
                 <Link as={`/blog/${b.id}`} href={`/blog/?id=${b.id}`}>
-                  <h4>
-                    <span className="subheader">{ReactHtmlParser(b.acf.sub_heading)}</span> /{" "}
-                    {ReactHtmlParser(b.title.rendered)}
-                  </h4>
+                  test
                 </Link>
               </div>
-
-              <button
-                className="button"
-                value={b.id}
-                onClick={() => {
-                  let audioPlayer = document.getElementById("audioPlayer");
-                  setValue({ ...value, ["audioId"]: b.id });
-                  audioPlayer.setAttribute("src", b.rte_mp3_audio);
-                  audioPlayer.play();
-                }}
-              >
-                <i className="fas fa-play" /> Play! {b.id === audioPlaying && "playing"} {playerStatus} {audioPlaying}
-              </button>
-              <AudioButton id={b.id} audioUrl={b.rte_mp3_audio} />
             </div>
           ))}
         </div>
@@ -122,11 +95,9 @@ Blogs.getInitialProps = async ({ query }) => {
   }
   const response = await fetch(url);
   const data = await response.json();
-  console.log(`got ${data.length} records`);
-  //console.log(data);
   return {
     data
   };
 };
 
-export default Blogs;
+export default withRouter(Blogs);
