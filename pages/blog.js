@@ -25,10 +25,27 @@ const Blog = ({ router, blog, posts }) => {
 
   const [playerStatus, setPlayerStatus] = useState("player");
 
+  let image = "no Image";
+  if (blog.better_featured_image != null) {
+    image = blog.better_featured_image.source_url;
+  }
+
   return (
     <Layout title="Blogs" footer={`Copyright ${new Date().getFullYear()}`}>
       <Head>
-        <title>{ReactHtmlParser(blog.title.rendered)}</title>
+        <title>{blog.title.rendered}</title>
+        <meta property="og:locale" content="en_GB" key="locale" />
+        <meta property="og:type" content="article" key="ogtype" />
+        <meta property="og:title" content={blog.title.rendered} key="ogtitle" />
+        <meta property="og:description" content={blog.title.rendered} key="ogdesc" />
+        <meta property="og:url" content={`https://hacker-next.dougbanville.now.sh/blog/${blog.id}`} key="ogurl" />
+        <meta property="og:site_name" content="RTÉ Radio 1 Highlights" key="ogsite" />
+        <meta property="og:image" content={image} key="ogimage" />
+
+        <meta name="twitter:card" content="summary_large_image" key="summary_large_image" />
+        <meta name="twitter:description" content={blog.excerpt.rendered} key="twitterdesc" />
+        <meta name="twitter:title" content={blog.title.rendered} key="twittertitle" />
+        <meta name="twitter:image" content={image} key="twitterimage" />
       </Head>
       <div className="grid-container">
         <div className="grid-x grid-margin-x">

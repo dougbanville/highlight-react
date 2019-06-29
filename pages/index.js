@@ -52,7 +52,7 @@ const Index = ({ data }) => {
   return (
     <Layout title="Index" footer={`Copyright ${new Date().getFullYear()}`}>
       <Head>
-        <title>Index {audioPlaying}</title>
+        <title>Highlights</title>
       </Head>
       <div className="grid-container">
         <div className="grid-x grid-margin-x">
