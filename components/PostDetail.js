@@ -2,7 +2,6 @@ import Link from "next/link";
 import ReactHtmlParser from "react-html-parser";
 import AudioButton from "../components/AudioButton";
 import PostImage from "../components/PostImage";
-import SmallPost from "../components/SmallPost";
 
 const PostDetail = ({ post, full }) => {
   console.log(post.better_featured_image);
@@ -10,7 +9,8 @@ const PostDetail = ({ post, full }) => {
   if (post.better_featured_image != null) {
     image = post.better_featured_image.source_url;
   }
-  let content = null;
+  let content = post.excerpt.rendered.replace("Read More", "");
+  content = ReactHtmlParser(content);
   if (full) {
     content = ReactHtmlParser(post.content.rendered);
   }
@@ -19,12 +19,14 @@ const PostDetail = ({ post, full }) => {
       <PostImage image={image} postId={post.id} />
       <div className="entry-wrap">
         <Link as={`/blog/${post.id}`} href={`/blog/?id=${post.id}`}>
-          <h4>
-            <span className="subheader">{ReactHtmlParser(post.acf.sub_heading)}</span> /{" "}
-            {ReactHtmlParser(post.title.rendered)}
+          <div>
+            <h4>
+              <span className="subheader">{ReactHtmlParser(post.acf.sub_heading)}</span> /{" "}
+              {ReactHtmlParser(post.title.rendered)}
+            </h4>
             <hr />
             {content}
-          </h4>
+          </div>
         </Link>
       </div>
       <AudioButton id={post.id} audioUrl={post.rte_mp3_audio} />

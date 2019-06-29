@@ -2243,24 +2243,35 @@ function (_Document) {
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "stylesheet",
-        href: "/static/styles.css",
+        id: "x-google-fonts-css",
+        href: "//fonts.googleapis.com/css?family=PT+Sans%3A400%2C400italic%2C700%2C700italic%7CMontserrat%3A400%7COswald%3A700%7COpen+Sans%3A400&subset=latin%2Clatin-ext&ver=4.6.1",
+        type: "text/css",
+        media: "all",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 25
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
+        rel: "stylesheet",
+        href: "/static/styles.css",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("script", {
         src: "https://kit.fontawesome.com/e25e50b708.js",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 33
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("script", {
         src: "https://cdn.jsdelivr.net/npm/openplayerjs@latest/dist/openplayer.min.js",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 34
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -2268,25 +2279,25 @@ function (_Document) {
         href: "https://cdn.jsdelivr.net/npm/openplayerjs@latest/dist/openplayer.min.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 35
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("body", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 38
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_6__["Main"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 39
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_6__["NextScript"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 40
         },
         __self: this
       })));

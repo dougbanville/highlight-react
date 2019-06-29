@@ -65,11 +65,6 @@ const Index = ({ data }) => {
           {data.map((b, i) => (
             <div key={b.id} className="cell medium-6 small-12 article">
               <PostDetail post={b} />
-              <div>
-                <Link as={`/blog/${b.id}`} href={`/blog/?id=${b.id}`}>
-                  test
-                </Link>
-              </div>
             </div>
           ))}
         </div>
