@@ -2,8 +2,6 @@ body {
   background: #f3f3f3;
 }
 .my-nav {
-  background: black;
-  color: white;
   height: 80px;
 }
 .my-nav a {

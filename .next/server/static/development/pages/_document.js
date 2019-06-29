@@ -115,6 +115,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var _jsxFileName = "/Users/dougbanville/hacker-next/components/AudioPlayer.js";
 
 
 
@@ -133,10 +134,16 @@ function (_Component) {
     key: "render",
     value: function render() {
       var mediaHtml = "<audio id=\"audioPlayer\" controls />";
+      var openPLayer = "<audio id=\"audioPlayer\" class=\"op-player op-player__media\" controls playsinline>\n    <source >\n</audio>";
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         dangerouslySetInnerHTML: {
-          __html: mediaHtml
-        }
+          __html: openPLayer
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        },
+        __self: this
       });
     }
   }]);
@@ -2249,22 +2256,37 @@ function (_Document) {
           lineNumber: 26
         },
         __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("script", {
+        src: "https://cdn.jsdelivr.net/npm/openplayerjs@latest/dist/openplayer.min.js",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
+        rel: "stylesheet",
+        href: "https://cdn.jsdelivr.net/npm/openplayerjs@latest/dist/openplayer.min.css",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
+        },
+        __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("body", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 31
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_6__["Main"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 32
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_6__["NextScript"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 33
         },
         __self: this
       })));

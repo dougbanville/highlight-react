@@ -133,6 +133,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var _jsxFileName = "/Users/dougbanville/hacker-next/components/AudioPlayer.js";
 
 
 
@@ -151,10 +152,16 @@ function (_Component) {
     key: "render",
     value: function render() {
       var mediaHtml = "<audio id=\"audioPlayer\" controls />";
+      var openPLayer = "<audio id=\"audioPlayer\" class=\"op-player op-player__media\" controls playsinline>\n    <source >\n</audio>";
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         dangerouslySetInnerHTML: {
-          __html: mediaHtml
-        }
+          __html: openPLayer
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        },
+        __self: this
       });
     }
   }]);

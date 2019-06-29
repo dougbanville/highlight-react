@@ -8,10 +8,11 @@ import fetch from "isomorphic-fetch";
 import ReactHtmlParser from "react-html-parser";
 import AudioButton from "../components/AudioButton";
 import PostDetail from "../components/PostDetail";
+import SmallPost from "../components/SmallPost";
 
 //import Error from "./_error";
 
-const Blog = ({ router, blog }) => {
+const Blog = ({ router, blog, posts }) => {
   const [value, setValue] = useState({
     text: "",
     audioId: "NOt set",
@@ -34,7 +35,11 @@ const Blog = ({ router, blog }) => {
           <div className="medium-8">
             <PostDetail post={blog} full="true" />
           </div>
-          <div className="medium-4">Related</div>
+          <div className="medium-4">
+            {posts.map((p, i) => {
+              if (p.id != blog.id) return <SmallPost post={p} key={i} />;
+            })}
+          </div>
         </div>
       </div>
       <style jsx>
@@ -52,16 +57,25 @@ const Blog = ({ router, blog }) => {
 
 Blog.getInitialProps = async context => {
   let data;
+  let posts;
   try {
     let url = `https://radio.rte.ie/radio1highlights/wp-json/wp/v2/posts/${context.query.id}`;
+    let allPosts = `https://radio.rte.ie/radio1highlights/wp-json/wp/v2/posts/`;
     const response = await fetch(url);
+    const postsResponse = await fetch(allPosts);
+    posts = await postsResponse.json();
     data = await response.json();
   } catch (err) {
     console.log(err);
     data = [];
+    posts = [];
   }
   return {
-    blog: data
+    blog: data,
+    posts: posts.filter(r => {
+      console.log(data);
+      return r;
+    })
   };
 };
 
