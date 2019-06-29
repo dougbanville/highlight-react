@@ -20,7 +20,6 @@ const Index = ({ data }) => {
 
   const handleChange = name => e => {
     //setSearchQuery(e.target.value);
-    console.log("cha" + e.target.value);
     setValue({ ...value, [name]: e.target.value });
   };
   const [searchQuery, setSearchQuery] = useState("tubridy");
@@ -41,7 +40,7 @@ const Index = ({ data }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    Router.push(`/Index/?searchTerm=${text}`);
+    Router.push(`/?searchTerm=${text}`);
   };
 
   const playFunction = e => {
