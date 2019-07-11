@@ -26,8 +26,10 @@ class MyApp extends App {
   componentDidMount = () => {
     //!Setup an event listener for your audio player
     const audioPlayer = document.getElementById(`audioPlayer`);
+    const container = document.getElementById("container");
 
     audioPlayer.oncanplay = a => {
+      container.setAttribute("class", "nudge");
       this.setState({
         ready: true
       });
@@ -103,10 +105,8 @@ class MyApp extends App {
         >
           <Component {...pageProps} />
 
-          <div className="staticDiv" id="static">
-            <AudioPlayer />
-            <AudioUi audioId={this.state.audioId} showPlayer={this.state.showPlayer} />
-          </div>
+          <AudioPlayer />
+          <AudioUi audioId={this.state.audioId} showPlayer={this.state.showPlayer} />
         </AudioContext.Provider>
       </Container>
     );

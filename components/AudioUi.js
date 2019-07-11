@@ -14,10 +14,12 @@ const AudioUi = () => {
   //const playerTime = localStorage.getItem("currentTime");
   if (ready) {
     return (
-      <div className="audio-ui">
-        <ToggleAudio />
-        <ProgressBar value={time} max={duration} />
-        my Audio! {ready} {audioId} {time} {duration} {percentage(time, duration)}
+      <div>
+        <div className="audio-ui">
+          <ToggleAudio />
+          <ProgressBar value={time} max={duration} />
+          my Audio! {ready} {audioId} {time} {duration} {percentage(time, duration)}
+        </div>
         <style jsx>
           {`
             .audio-ui {
@@ -27,16 +29,21 @@ const AudioUi = () => {
               color: white;
               top: 0px;
               width: 100%;
+              max-height: 60px;
             }
             progress {
               width: 100%;
+            }
+            .nudge {
+              height: 60px;
+              display: block;
             }
           `}
         </style>
       </div>
     );
   } else {
-    return <div />;
+    return <div className="audio-ui" />;
   }
 };
 export default AudioUi;
