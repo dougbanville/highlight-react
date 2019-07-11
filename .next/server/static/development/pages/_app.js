@@ -170,7 +170,7 @@ function (_Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       //this.openPlayer
-      console.log("hi ".concat(this.props.showPlayer));
+      console.log("hi ".concat(this.props.showPlaye));
     }
   }]);
 
@@ -195,7 +195,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_AudioContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/AudioContext */ "./components/AudioContext.js");
+/* harmony import */ var _components_ToggleAudio__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ToggleAudio */ "./components/ToggleAudio.js");
+/* harmony import */ var _components_ProgressBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/ProgressBar */ "./components/ProgressBar.js");
 var _jsxFileName = "/Users/dougbanville/highlight-react/components/AudioUi.js";
+
+
 
 
 
@@ -220,42 +224,35 @@ var AudioUi = function AudioUi() {
 
   if (ready) {
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "jsx-1025696931" + " " + "audio-ui",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 15
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-      type: "range",
-      name: "points",
-      min: "0",
-      max: duration,
-      value: time,
-      className: "jsx-1025696931",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 16
-      },
-      __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("progress", {
-      value: time,
-      max: duration,
-      className: "jsx-1025696931",
+      className: "jsx-4047828435" + " " + "audio-ui",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 17
       },
       __self: this
-    }), "my Audio! ", ready, " ", audioId, " ", time, " ", duration, " ", percentage(time, duration), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-      id: "1025696931",
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ToggleAudio__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
+      },
       __self: this
-    }, ".audio-ui.jsx-1025696931{position:fixed;height:60px;background:indigo;color:white;top:0px;width:100%;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kb3VnYmFudmlsbGUvaGlnaGxpZ2h0LXJlYWN0L2NvbXBvbmVudHMvQXVkaW9VaS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFtQlcsQUFHOEIsZUFDSCxZQUNNLGtCQUNOLFlBQ0osUUFDRyxXQUNiIiwiZmlsZSI6Ii9Vc2Vycy9kb3VnYmFudmlsbGUvaGlnaGxpZ2h0LXJlYWN0L2NvbXBvbmVudHMvQXVkaW9VaS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHVzZUNvbnRleHQgfSBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCBBdWRpb0NvbnRleHQgZnJvbSBcIi4uL2NvbXBvbmVudHMvQXVkaW9Db250ZXh0XCI7XG5cbmNvbnN0IEF1ZGlvVWkgPSAoKSA9PiB7XG4gIGNvbnN0IHsgcmVhZHksIGF1ZGlvSWQsIGlzUGxheWluZywgcGxheUF1ZGlvLCBwYXVzZUF1ZGlvLCByZXN1bWVBdWRpbywgdGltZSwgZHVyYXRpb24gfSA9IHVzZUNvbnRleHQoXG4gICAgQXVkaW9Db250ZXh0XG4gICk7XG4gIGNvbnN0IHBlcmNlbnRhZ2UgPSAodGltZSwgZHVyYXRpb24pID0+IHtcbiAgICAvL3JldHVybiB0aW1lO1xuICAgIHJldHVybiBNYXRoLmZsb29yKCh0aW1lIC8gZHVyYXRpb24pICogMTAwKSArIFwiJVwiO1xuICB9O1xuICAvL2NvbnN0IHBsYXllclRpbWUgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbShcImN1cnJlbnRUaW1lXCIpO1xuICBpZiAocmVhZHkpIHtcbiAgICByZXR1cm4gKFxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJhdWRpby11aVwiPlxuICAgICAgICA8aW5wdXQgdHlwZT1cInJhbmdlXCIgbmFtZT1cInBvaW50c1wiIG1pbj1cIjBcIiBtYXg9e2R1cmF0aW9ufSB2YWx1ZT17dGltZX0gLz5cbiAgICAgICAgPHByb2dyZXNzIHZhbHVlPXt0aW1lfSBtYXg9e2R1cmF0aW9ufSAvPlxuICAgICAgICBteSBBdWRpbyEge3JlYWR5fSB7YXVkaW9JZH0ge3RpbWV9IHtkdXJhdGlvbn0ge3BlcmNlbnRhZ2UodGltZSwgZHVyYXRpb24pfVxuICAgICAgICA8c3R5bGUganN4PlxuICAgICAgICAgIHtgXG4gICAgICAgICAgICAuYXVkaW8tdWkge1xuICAgICAgICAgICAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgICAgICAgICAgIGhlaWdodDogNjBweDtcbiAgICAgICAgICAgICAgYmFja2dyb3VuZDogaW5kaWdvO1xuICAgICAgICAgICAgICBjb2xvcjogd2hpdGU7XG4gICAgICAgICAgICAgIHRvcDogMHB4O1xuICAgICAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICBgfVxuICAgICAgICA8L3N0eWxlPlxuICAgICAgPC9kaXY+XG4gICAgKTtcbiAgfSBlbHNlIHtcbiAgICByZXR1cm4gPGRpdiAvPjtcbiAgfVxufTtcbmV4cG9ydCBkZWZhdWx0IEF1ZGlvVWk7XG4iXX0= */\n/*@ sourceURL=/Users/dougbanville/highlight-react/components/AudioUi.js */"));
+    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ProgressBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      value: time,
+      max: duration,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    }), "my Audio! ", ready, " ", audioId, " ", time, " ", duration, " ", percentage(time, duration), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+      id: "4047828435",
+      __self: this
+    }, ".audio-ui.jsx-4047828435{position:fixed;height:60px;background:indigo;color:white;top:0px;width:100%;}progress.jsx-4047828435{width:100%;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kb3VnYmFudmlsbGUvaGlnaGxpZ2h0LXJlYWN0L2NvbXBvbmVudHMvQXVkaW9VaS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFxQlcsQUFHOEIsQUFRSixXQUNiLElBUmMsWUFDTSxrQkFDTixZQUNKLFFBQ0csV0FDYiIsImZpbGUiOiIvVXNlcnMvZG91Z2JhbnZpbGxlL2hpZ2hsaWdodC1yZWFjdC9jb21wb25lbnRzL0F1ZGlvVWkuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VDb250ZXh0IH0gZnJvbSBcInJlYWN0XCI7XG5pbXBvcnQgQXVkaW9Db250ZXh0IGZyb20gXCIuLi9jb21wb25lbnRzL0F1ZGlvQ29udGV4dFwiO1xuaW1wb3J0IFRvZ2dsZUF1ZGlvIGZyb20gXCIuLi9jb21wb25lbnRzL1RvZ2dsZUF1ZGlvXCI7XG5pbXBvcnQgUHJvZ3Jlc3NCYXIgZnJvbSBcIi4uL2NvbXBvbmVudHMvUHJvZ3Jlc3NCYXJcIjtcblxuY29uc3QgQXVkaW9VaSA9ICgpID0+IHtcbiAgY29uc3QgeyByZWFkeSwgYXVkaW9JZCwgaXNQbGF5aW5nLCBwbGF5QXVkaW8sIHBhdXNlQXVkaW8sIHJlc3VtZUF1ZGlvLCB0aW1lLCBkdXJhdGlvbiB9ID0gdXNlQ29udGV4dChcbiAgICBBdWRpb0NvbnRleHRcbiAgKTtcbiAgY29uc3QgcGVyY2VudGFnZSA9ICh0aW1lLCBkdXJhdGlvbikgPT4ge1xuICAgIC8vcmV0dXJuIHRpbWU7XG4gICAgcmV0dXJuIE1hdGguZmxvb3IoKHRpbWUgLyBkdXJhdGlvbikgKiAxMDApICsgXCIlXCI7XG4gIH07XG4gIC8vY29uc3QgcGxheWVyVGltZSA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKFwiY3VycmVudFRpbWVcIik7XG4gIGlmIChyZWFkeSkge1xuICAgIHJldHVybiAoXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImF1ZGlvLXVpXCI+XG4gICAgICAgIDxUb2dnbGVBdWRpbyAvPlxuICAgICAgICA8UHJvZ3Jlc3NCYXIgdmFsdWU9e3RpbWV9IG1heD17ZHVyYXRpb259IC8+XG4gICAgICAgIG15IEF1ZGlvISB7cmVhZHl9IHthdWRpb0lkfSB7dGltZX0ge2R1cmF0aW9ufSB7cGVyY2VudGFnZSh0aW1lLCBkdXJhdGlvbil9XG4gICAgICAgIDxzdHlsZSBqc3g+XG4gICAgICAgICAge2BcbiAgICAgICAgICAgIC5hdWRpby11aSB7XG4gICAgICAgICAgICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICAgICAgICAgICAgaGVpZ2h0OiA2MHB4O1xuICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiBpbmRpZ287XG4gICAgICAgICAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgICAgICAgICAgdG9wOiAwcHg7XG4gICAgICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgcHJvZ3Jlc3Mge1xuICAgICAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICBgfVxuICAgICAgICA8L3N0eWxlPlxuICAgICAgPC9kaXY+XG4gICAgKTtcbiAgfSBlbHNlIHtcbiAgICByZXR1cm4gPGRpdiAvPjtcbiAgfVxufTtcbmV4cG9ydCBkZWZhdWx0IEF1ZGlvVWk7XG4iXX0= */\n/*@ sourceURL=/Users/dougbanville/highlight-react/components/AudioUi.js */"));
   } else {
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 39
       },
       __self: this
     });
@@ -263,6 +260,128 @@ var AudioUi = function AudioUi() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AudioUi);
+
+/***/ }),
+
+/***/ "./components/ProgressBar.js":
+/*!***********************************!*\
+  !*** ./components/ProgressBar.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_AudioContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/AudioContext */ "./components/AudioContext.js");
+var _jsxFileName = "/Users/dougbanville/highlight-react/components/ProgressBar.js";
+
+
+
+
+var ProgressBar = function ProgressBar() {
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_components_AudioContext__WEBPACK_IMPORTED_MODULE_1__["default"]),
+      ready = _useContext.ready,
+      audioId = _useContext.audioId,
+      isPlaying = _useContext.isPlaying,
+      playAudio = _useContext.playAudio,
+      pauseAudio = _useContext.pauseAudio,
+      resumeAudio = _useContext.resumeAudio,
+      time = _useContext.time,
+      duration = _useContext.duration;
+
+  if (!isNaN(duration)) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("progress", {
+      value: time,
+      max: duration,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    });
+  } else {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("progress", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    });
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ProgressBar);
+
+/***/ }),
+
+/***/ "./components/ToggleAudio.js":
+/*!***********************************!*\
+  !*** ./components/ToggleAudio.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_AudioContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/AudioContext */ "./components/AudioContext.js");
+var _jsxFileName = "/Users/dougbanville/highlight-react/components/ToggleAudio.js";
+
+
+
+
+var ToggleAudio = function ToggleAudio() {
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_components_AudioContext__WEBPACK_IMPORTED_MODULE_1__["default"]),
+      ready = _useContext.ready,
+      audioId = _useContext.audioId,
+      isPlaying = _useContext.isPlaying,
+      playAudio = _useContext.playAudio,
+      pauseAudio = _useContext.pauseAudio,
+      resumeAudio = _useContext.resumeAudio,
+      time = _useContext.time,
+      duration = _useContext.duration;
+
+  if (isPlaying) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "button",
+      onClick: pauseAudio,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-pause",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }), " Toggle");
+  } else {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "button",
+      onClick: resumeAudio,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-play",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    }), " Toggle");
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ToggleAudio);
 
 /***/ }),
 
@@ -1964,28 +2083,28 @@ function (_App) {
       };
 
       audioPlayer.ontimeupdate = function (a) {
-        console.log("".concat(a.srcElement.currentTime, " duration: ").concat(a.srcElement.duration)); //console.log(`playing ${a}`);
-
         localStorage.setItem("currentTime", a.srcElement.currentTime);
         var duration = 0;
 
         if (!isNaN(duration)) {
-          duration = a.srcElement.duration;
+          duration = Number(a.srcElement.duration);
         }
 
         _this.setState({
           isPlaying: true,
-          time: a.srcElement.currentTime,
-          duration: duration
+          time: Number(a.srcElement.currentTime),
+          duration: Number(duration)
         });
       };
 
       audioPlayer.onpause = function () {
-        console.log("pausing");
-
         _this.setState({
           isPlaying: false
         });
+      };
+
+      audioPlayer.onerror = function (e) {
+        console.log(e);
       };
     });
 
@@ -1994,7 +2113,10 @@ function (_App) {
       var audioProps = audio.target.value.split(",");
       var audioId = audioProps[0];
       var audioUrl = audioProps[1];
-      audioPlayer.setAttribute("src", audioUrl);
+
+      if (audioUrl) {
+        audioPlayer.setAttribute("src", audioUrl);
+      }
 
       _this.setState({
         audioId: audioId,
@@ -2029,7 +2151,7 @@ function (_App) {
       return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_11__["Container"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 90
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_AudioContext__WEBPACK_IMPORTED_MODULE_12__["default"].Provider, {
@@ -2046,13 +2168,13 @@ function (_App) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 91
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 104
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
@@ -2060,13 +2182,13 @@ function (_App) {
         id: "static",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 106
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_AudioPlayer__WEBPACK_IMPORTED_MODULE_13__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 107
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_AudioUi__WEBPACK_IMPORTED_MODULE_14__["default"], {
@@ -2074,7 +2196,7 @@ function (_App) {
         showPlayer: this.state.showPlayer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 108
         },
         __self: this
       }))));

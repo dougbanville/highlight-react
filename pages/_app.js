@@ -34,24 +34,24 @@ class MyApp extends App {
     };
 
     audioPlayer.ontimeupdate = a => {
-      console.log(`${a.srcElement.currentTime} duration: ${a.srcElement.duration}`);
-      //console.log(`playing ${a}`);
       localStorage.setItem("currentTime", a.srcElement.currentTime);
       let duration = 0;
       if (!isNaN(duration)) {
-        duration = a.srcElement.duration;
+        duration = Number(a.srcElement.duration);
       }
       this.setState({
         isPlaying: true,
-        time: a.srcElement.currentTime,
-        duration: duration
+        time: Number(a.srcElement.currentTime),
+        duration: Number(duration)
       });
     };
     audioPlayer.onpause = () => {
-      console.log(`pausing`);
       this.setState({
         isPlaying: false
       });
+    };
+    audioPlayer.onerror = e => {
+      console.log(e);
     };
   };
 
@@ -61,8 +61,9 @@ class MyApp extends App {
     let audioProps = audio.target.value.split(",");
     let audioId = audioProps[0];
     let audioUrl = audioProps[1];
-
-    audioPlayer.setAttribute("src", audioUrl);
+    if (audioUrl) {
+      audioPlayer.setAttribute("src", audioUrl);
+    }
 
     this.setState({
       audioId: audioId,

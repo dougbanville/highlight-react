@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import AudioContext from "../components/AudioContext";
+import ToggleAudio from "../components/ToggleAudio";
+import ProgressBar from "../components/ProgressBar";
 
 const AudioUi = () => {
   const { ready, audioId, isPlaying, playAudio, pauseAudio, resumeAudio, time, duration } = useContext(
@@ -13,8 +15,8 @@ const AudioUi = () => {
   if (ready) {
     return (
       <div className="audio-ui">
-        <input type="range" name="points" min="0" max={duration} value={time} />
-        <progress value={time} max={duration} />
+        <ToggleAudio />
+        <ProgressBar value={time} max={duration} />
         my Audio! {ready} {audioId} {time} {duration} {percentage(time, duration)}
         <style jsx>
           {`
@@ -24,6 +26,9 @@ const AudioUi = () => {
               background: indigo;
               color: white;
               top: 0px;
+              width: 100%;
+            }
+            progress {
               width: 100%;
             }
           `}

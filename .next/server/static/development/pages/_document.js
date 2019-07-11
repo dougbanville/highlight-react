@@ -149,7 +149,7 @@ function (_Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       //this.openPlayer
-      console.log("hi ".concat(this.props.showPlayer));
+      console.log("hi ".concat(this.props.showPlaye));
     }
   }]);
 

@@ -15,6 +15,6 @@ export default class PlayButton extends Component {
 
   componentDidMount() {
     //this.openPlayer
-    console.log(`hi ${this.props.showPlayer}`);
+    console.log(`hi ${this.props.showPlaye}`);
   }
 }
