@@ -43,7 +43,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/dougbanville/hacker-next/components/AudioPlayer.js";
+var _jsxFileName = "/Users/dougbanville/highlight-react/components/AudioPlayer.js";
 
 
 
@@ -52,31 +52,32 @@ var PlayButton =
 function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(PlayButton, _Component);
 
-  function PlayButton() {
+  function PlayButton(props) {
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, PlayButton);
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(PlayButton).apply(this, arguments));
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(PlayButton).call(this, props)); //this.listRef = React.createRef();
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(PlayButton, [{
     key: "render",
     value: function render() {
-      var mediaHtml = "<audio id=\"audioPlayer\" controls />";
-      var openPlayer = "<audio id=\"audioPlayer\" class=\"op-player op-player__media\" controls playsinline>\n    <source >\n</audio>";
+      var audioPlayer = "<audio id=\"audioPlayer\" playsinline>\n    <source >\n</audio>";
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         dangerouslySetInnerHTML: {
-          __html: openPlayer
+          __html: audioPlayer
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
+          lineNumber: 13
         },
         __self: this
       });
     }
   }, {
     key: "componentDidMount",
-    value: function componentDidMount() {//this.openPlayer
+    value: function componentDidMount() {
+      //this.openPlayer
+      console.log("hi ".concat(this.props.showPlayer));
     }
   }]);
 
@@ -101,7 +102,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_AudioContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/AudioContext */ "./components/AudioContext.js");
-var _jsxFileName = "/Users/dougbanville/hacker-next/components/AudioUi.js";
+var _jsxFileName = "/Users/dougbanville/highlight-react/components/AudioUi.js";
 
 
 
@@ -109,25 +110,63 @@ var _jsxFileName = "/Users/dougbanville/hacker-next/components/AudioUi.js";
 
 var AudioUi = function AudioUi() {
   var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_1__["useContext"])(_components_AudioContext__WEBPACK_IMPORTED_MODULE_2__["default"]),
+      ready = _useContext.ready,
       audioId = _useContext.audioId,
       isPlaying = _useContext.isPlaying,
       playAudio = _useContext.playAudio,
       pauseAudio = _useContext.pauseAudio,
       resumeAudio = _useContext.resumeAudio,
-      time = _useContext.time; //const playerTime = localStorage.getItem("currentTime");
+      time = _useContext.time,
+      duration = _useContext.duration;
+
+  var percentage = function percentage(time, duration) {
+    //return time;
+    return Math.floor(time / duration * 100) + "%";
+  }; //const playerTime = localStorage.getItem("currentTime");
 
 
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "jsx-1517001014" + " " + "audio-ui",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, "my Audio! ", audioId, " ", time, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "1517001014",
-    __self: this
-  }, ".audio-ui.jsx-1517001014{position:fixed;height:60px;background:indigo;color:white;top:0px;width:100%;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kb3VnYmFudmlsbGUvaGFja2VyLW5leHQvY29tcG9uZW50cy9BdWRpb1VpLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVVTLEFBRzRCLGVBQ0gsWUFDTSxrQkFDTixZQUNKLFFBQ0csV0FDYiIsImZpbGUiOiIvVXNlcnMvZG91Z2JhbnZpbGxlL2hhY2tlci1uZXh0L2NvbXBvbmVudHMvQXVkaW9VaS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHVzZUNvbnRleHQgfSBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCBBdWRpb0NvbnRleHQgZnJvbSBcIi4uL2NvbXBvbmVudHMvQXVkaW9Db250ZXh0XCI7XG5cbmNvbnN0IEF1ZGlvVWkgPSAoKSA9PiB7XG4gIGNvbnN0IHsgYXVkaW9JZCwgaXNQbGF5aW5nLCBwbGF5QXVkaW8sIHBhdXNlQXVkaW8sIHJlc3VtZUF1ZGlvLCB0aW1lIH0gPSB1c2VDb250ZXh0KEF1ZGlvQ29udGV4dCk7XG4gIC8vY29uc3QgcGxheWVyVGltZSA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKFwiY3VycmVudFRpbWVcIik7XG4gIHJldHVybiAoXG4gICAgPGRpdiBjbGFzc05hbWU9XCJhdWRpby11aVwiPlxuICAgICAgbXkgQXVkaW8hIHthdWRpb0lkfSB7dGltZX1cbiAgICAgIDxzdHlsZSBqc3g+XG4gICAgICAgIHtgXG4gICAgICAgICAgLmF1ZGlvLXVpIHtcbiAgICAgICAgICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICAgICAgICAgIGhlaWdodDogNjBweDtcbiAgICAgICAgICAgIGJhY2tncm91bmQ6IGluZGlnbztcbiAgICAgICAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgICAgICAgIHRvcDogMHB4O1xuICAgICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgfVxuICAgICAgICBgfVxuICAgICAgPC9zdHlsZT5cbiAgICA8L2Rpdj5cbiAgKTtcbn07XG5leHBvcnQgZGVmYXVsdCBBdWRpb1VpO1xuIl19 */\n/*@ sourceURL=/Users/dougbanville/hacker-next/components/AudioUi.js */"));
+  if (ready) {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "jsx-1025696931" + " " + "audio-ui",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+      type: "range",
+      name: "points",
+      min: "0",
+      max: duration,
+      value: time,
+      className: "jsx-1025696931",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("progress", {
+      value: time,
+      max: duration,
+      className: "jsx-1025696931",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    }), "my Audio! ", ready, " ", audioId, " ", time, " ", duration, " ", percentage(time, duration), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+      id: "1025696931",
+      __self: this
+    }, ".audio-ui.jsx-1025696931{position:fixed;height:60px;background:indigo;color:white;top:0px;width:100%;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kb3VnYmFudmlsbGUvaGlnaGxpZ2h0LXJlYWN0L2NvbXBvbmVudHMvQXVkaW9VaS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFtQlcsQUFHOEIsZUFDSCxZQUNNLGtCQUNOLFlBQ0osUUFDRyxXQUNiIiwiZmlsZSI6Ii9Vc2Vycy9kb3VnYmFudmlsbGUvaGlnaGxpZ2h0LXJlYWN0L2NvbXBvbmVudHMvQXVkaW9VaS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHVzZUNvbnRleHQgfSBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCBBdWRpb0NvbnRleHQgZnJvbSBcIi4uL2NvbXBvbmVudHMvQXVkaW9Db250ZXh0XCI7XG5cbmNvbnN0IEF1ZGlvVWkgPSAoKSA9PiB7XG4gIGNvbnN0IHsgcmVhZHksIGF1ZGlvSWQsIGlzUGxheWluZywgcGxheUF1ZGlvLCBwYXVzZUF1ZGlvLCByZXN1bWVBdWRpbywgdGltZSwgZHVyYXRpb24gfSA9IHVzZUNvbnRleHQoXG4gICAgQXVkaW9Db250ZXh0XG4gICk7XG4gIGNvbnN0IHBlcmNlbnRhZ2UgPSAodGltZSwgZHVyYXRpb24pID0+IHtcbiAgICAvL3JldHVybiB0aW1lO1xuICAgIHJldHVybiBNYXRoLmZsb29yKCh0aW1lIC8gZHVyYXRpb24pICogMTAwKSArIFwiJVwiO1xuICB9O1xuICAvL2NvbnN0IHBsYXllclRpbWUgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbShcImN1cnJlbnRUaW1lXCIpO1xuICBpZiAocmVhZHkpIHtcbiAgICByZXR1cm4gKFxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJhdWRpby11aVwiPlxuICAgICAgICA8aW5wdXQgdHlwZT1cInJhbmdlXCIgbmFtZT1cInBvaW50c1wiIG1pbj1cIjBcIiBtYXg9e2R1cmF0aW9ufSB2YWx1ZT17dGltZX0gLz5cbiAgICAgICAgPHByb2dyZXNzIHZhbHVlPXt0aW1lfSBtYXg9e2R1cmF0aW9ufSAvPlxuICAgICAgICBteSBBdWRpbyEge3JlYWR5fSB7YXVkaW9JZH0ge3RpbWV9IHtkdXJhdGlvbn0ge3BlcmNlbnRhZ2UodGltZSwgZHVyYXRpb24pfVxuICAgICAgICA8c3R5bGUganN4PlxuICAgICAgICAgIHtgXG4gICAgICAgICAgICAuYXVkaW8tdWkge1xuICAgICAgICAgICAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgICAgICAgICAgIGhlaWdodDogNjBweDtcbiAgICAgICAgICAgICAgYmFja2dyb3VuZDogaW5kaWdvO1xuICAgICAgICAgICAgICBjb2xvcjogd2hpdGU7XG4gICAgICAgICAgICAgIHRvcDogMHB4O1xuICAgICAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICBgfVxuICAgICAgICA8L3N0eWxlPlxuICAgICAgPC9kaXY+XG4gICAgKTtcbiAgfSBlbHNlIHtcbiAgICByZXR1cm4gPGRpdiAvPjtcbiAgfVxufTtcbmV4cG9ydCBkZWZhdWx0IEF1ZGlvVWk7XG4iXX0= */\n/*@ sourceURL=/Users/dougbanville/highlight-react/components/AudioUi.js */"));
+  } else {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
+    });
+  }
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AudioUi);
@@ -10241,7 +10280,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/dougbanville/hacker-next/pages/_app.js";
+var _jsxFileName = "/Users/dougbanville/highlight-react/pages/_app.js";
 
 
 
@@ -10268,23 +10307,37 @@ function (_App) {
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(MyApp)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_9__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this), "state", {
+      showPlayer: false,
       audioRefId: null,
       isPlaying: "false",
-      audioPlayer: null
+      audioPlayer: null,
+      ready: false
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_9__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this), "componentDidMount", function () {
       //!Setup an event listener for your audio player
       var audioPlayer = document.getElementById("audioPlayer");
 
+      audioPlayer.oncanplay = function (a) {
+        _this.setState({
+          ready: true
+        });
+      };
+
       audioPlayer.ontimeupdate = function (a) {
-        console.log(a.srcElement.currentTime); //console.log(`playing ${a}`);
+        console.log("".concat(a.srcElement.currentTime, " duration: ").concat(a.srcElement.duration)); //console.log(`playing ${a}`);
 
         localStorage.setItem("currentTime", a.srcElement.currentTime);
+        var duration = 0;
+
+        if (!isNaN(duration)) {
+          duration = a.srcElement.duration;
+        }
 
         _this.setState({
           isPlaying: true,
-          time: a.srcElement.currentTime
+          time: a.srcElement.currentTime,
+          duration: duration
         });
       };
 
@@ -10337,7 +10390,7 @@ function (_App) {
       return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_11__["Container"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 89
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_AudioContext__WEBPACK_IMPORTED_MODULE_12__["default"].Provider, {
@@ -10348,41 +10401,44 @@ function (_App) {
           pauseAudio: this.pauseAudio,
           isPlaying: this.state.isPlaying,
           resumeAudio: this.resumeAudio,
-          time: this.state.time
+          time: this.state.time,
+          duration: this.state.duration,
+          ready: this.state.ready
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 90
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 103
         },
         __self: this
-      }))), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
+      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
         className: "staticDiv",
         id: "static",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 105
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_AudioPlayer__WEBPACK_IMPORTED_MODULE_13__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 106
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_AudioUi__WEBPACK_IMPORTED_MODULE_14__["default"], {
         audioId: this.state.audioId,
+        showPlayer: this.state.showPlayer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 107
         },
         __self: this
-      })));
+      }))));
     }
   }], [{
     key: "getInitialProps",

@@ -32,8 +32,6 @@ class MyDocument extends Document {
           />
           <link rel="stylesheet" href="/static/styles.css" />
           <script src="https://kit.fontawesome.com/e25e50b708.js" />
-          <script src="https://cdn.jsdelivr.net/npm/openplayerjs@latest/dist/openplayer.min.js" />
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/openplayerjs@latest/dist/openplayer.min.css" />
         </head>
 
         <body>

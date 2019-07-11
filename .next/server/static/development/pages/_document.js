@@ -115,7 +115,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/dougbanville/hacker-next/components/AudioPlayer.js";
+var _jsxFileName = "/Users/dougbanville/highlight-react/components/AudioPlayer.js";
 
 
 
@@ -124,31 +124,32 @@ var PlayButton =
 function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(PlayButton, _Component);
 
-  function PlayButton() {
+  function PlayButton(props) {
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, PlayButton);
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(PlayButton).apply(this, arguments));
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(PlayButton).call(this, props)); //this.listRef = React.createRef();
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(PlayButton, [{
     key: "render",
     value: function render() {
-      var mediaHtml = "<audio id=\"audioPlayer\" controls />";
-      var openPlayer = "<audio id=\"audioPlayer\" class=\"op-player op-player__media\" controls playsinline>\n    <source >\n</audio>";
+      var audioPlayer = "<audio id=\"audioPlayer\" playsinline>\n    <source >\n</audio>";
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         dangerouslySetInnerHTML: {
-          __html: openPlayer
+          __html: audioPlayer
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
+          lineNumber: 13
         },
         __self: this
       });
     }
   }, {
     key: "componentDidMount",
-    value: function componentDidMount() {//this.openPlayer
+    value: function componentDidMount() {
+      //this.openPlayer
+      console.log("hi ".concat(this.props.showPlayer));
     }
   }]);
 
@@ -2169,7 +2170,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/dougbanville/hacker-next/pages/_document.js";
+var _jsxFileName = "/Users/dougbanville/highlight-react/pages/_document.js";
 
 
 
@@ -2272,37 +2273,22 @@ function (_Document) {
           lineNumber: 34
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("script", {
-        src: "https://cdn.jsdelivr.net/npm/openplayerjs@latest/dist/openplayer.min.js",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 35
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
-        rel: "stylesheet",
-        href: "https://cdn.jsdelivr.net/npm/openplayerjs@latest/dist/openplayer.min.css",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36
-        },
-        __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("body", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 37
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_6__["Main"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 38
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_6__["NextScript"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 39
         },
         __self: this
       })));

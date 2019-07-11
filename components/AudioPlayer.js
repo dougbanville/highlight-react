@@ -2,15 +2,19 @@ import React, { Component } from "react";
 import { useState } from "react";
 
 export default class PlayButton extends Component {
+  constructor(props) {
+    super(props);
+    //this.listRef = React.createRef();
+  }
   render() {
-    const mediaHtml = `<audio id="audioPlayer" controls />`;
-    const openPlayer = `<audio id="audioPlayer" class="op-player op-player__media" controls playsinline>
+    const audioPlayer = `<audio id="audioPlayer" playsinline>
     <source >
 </audio>`;
-    return <div dangerouslySetInnerHTML={{ __html: openPlayer }} />;
+    return <div dangerouslySetInnerHTML={{ __html: audioPlayer }} />;
   }
 
   componentDidMount() {
     //this.openPlayer
+    console.log(`hi ${this.props.showPlayer}`);
   }
 }

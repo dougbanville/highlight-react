@@ -7,9 +7,11 @@ import Router from "next/router";
 
 class MyApp extends App {
   state = {
+    showPlayer: false,
     audioRefId: null,
     isPlaying: "false",
-    audioPlayer: null
+    audioPlayer: null,
+    ready: false
   };
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
@@ -25,13 +27,24 @@ class MyApp extends App {
     //!Setup an event listener for your audio player
     const audioPlayer = document.getElementById(`audioPlayer`);
 
+    audioPlayer.oncanplay = a => {
+      this.setState({
+        ready: true
+      });
+    };
+
     audioPlayer.ontimeupdate = a => {
-      console.log(a.srcElement.currentTime);
+      console.log(`${a.srcElement.currentTime} duration: ${a.srcElement.duration}`);
       //console.log(`playing ${a}`);
       localStorage.setItem("currentTime", a.srcElement.currentTime);
+      let duration = 0;
+      if (!isNaN(duration)) {
+        duration = a.srcElement.duration;
+      }
       this.setState({
         isPlaying: true,
-        time: a.srcElement.currentTime
+        time: a.srcElement.currentTime,
+        duration: duration
       });
     };
     audioPlayer.onpause = () => {
@@ -56,7 +69,6 @@ class MyApp extends App {
       isPlaying: true
     });
     Router.push("/?biong");
-
     audioPlayer.play();
   };
   pauseAudio() {
@@ -83,15 +95,18 @@ class MyApp extends App {
             pauseAudio: this.pauseAudio,
             isPlaying: this.state.isPlaying,
             resumeAudio: this.resumeAudio,
-            time: this.state.time
+            time: this.state.time,
+            duration: this.state.duration,
+            ready: this.state.ready
           }}
         >
           <Component {...pageProps} />
+
+          <div className="staticDiv" id="static">
+            <AudioPlayer />
+            <AudioUi audioId={this.state.audioId} showPlayer={this.state.showPlayer} />
+          </div>
         </AudioContext.Provider>
-        <div className="staticDiv" id="static">
-          <AudioPlayer />
-          <AudioUi audioId={this.state.audioId} />
-        </div>
       </Container>
     );
   }
