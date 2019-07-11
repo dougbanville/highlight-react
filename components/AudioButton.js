@@ -8,7 +8,7 @@ const AudioButton = ({ id, audioUrl }) => {
   if (id == audioId && isPlaying) {
     return (
       <button className="button large secondary" onClick={pauseAudio}>
-        Pause
+        Pause {audioId}
       </button>
     );
   }

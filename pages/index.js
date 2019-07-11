@@ -69,6 +69,7 @@ const Index = ({ data }) => {
           ))}
         </div>
       </div>
+
       <style jsx>
         {`
           p {

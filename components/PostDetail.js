@@ -4,7 +4,6 @@ import AudioButton from "../components/AudioButton";
 import PostImage from "../components/PostImage";
 
 const PostDetail = ({ post, full }) => {
-  console.log(post.better_featured_image);
   let image = "no Image";
   if (post.better_featured_image != null) {
     image = post.better_featured_image.source_url;

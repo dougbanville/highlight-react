@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import { useState } from "react";
 import AudioPlayer from "../components/AudioPlayer";
 
 class MyDocument extends Document {

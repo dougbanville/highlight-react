@@ -134,10 +134,10 @@ function (_Component) {
     key: "render",
     value: function render() {
       var mediaHtml = "<audio id=\"audioPlayer\" controls />";
-      var openPLayer = "<audio id=\"audioPlayer\" class=\"op-player op-player__media\" controls playsinline>\n    <source >\n</audio>";
+      var openPlayer = "<audio id=\"audioPlayer\" class=\"op-player op-player__media\" controls playsinline>\n    <source >\n</audio>";
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         dangerouslySetInnerHTML: {
-          __html: openPLayer
+          __html: openPlayer
         },
         __source: {
           fileName: _jsxFileName,
@@ -145,6 +145,10 @@ function (_Component) {
         },
         __self: this
       });
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {//this.openPlayer
     }
   }]);
 
@@ -2170,6 +2174,7 @@ var _jsxFileName = "/Users/dougbanville/hacker-next/pages/_document.js";
 
 
 
+
 var MyDocument =
 /*#__PURE__*/
 function (_Document) {
@@ -2188,20 +2193,20 @@ function (_Document) {
         land: "en",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 7
+          lineNumber: 8
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("head", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 8
+          lineNumber: 9
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
         charSet: "UTF-8",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 9
+          lineNumber: 10
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
@@ -2209,7 +2214,7 @@ function (_Document) {
         content: "Doug Banville",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
+          lineNumber: 11
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -2219,7 +2224,7 @@ function (_Document) {
         crossOrigin: "anonymous",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 12
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -2230,7 +2235,7 @@ function (_Document) {
         media: "all",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 18
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -2238,7 +2243,7 @@ function (_Document) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 25
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -2249,7 +2254,7 @@ function (_Document) {
         media: "all",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 26
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -2257,21 +2262,21 @@ function (_Document) {
         href: "/static/styles.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 33
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("script", {
         src: "https://kit.fontawesome.com/e25e50b708.js",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 34
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("script", {
         src: "https://cdn.jsdelivr.net/npm/openplayerjs@latest/dist/openplayer.min.js",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 35
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -2279,25 +2284,25 @@ function (_Document) {
         href: "https://cdn.jsdelivr.net/npm/openplayerjs@latest/dist/openplayer.min.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 36
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("body", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 39
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_6__["Main"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 40
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_6__["NextScript"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 41
         },
         __self: this
       })));
