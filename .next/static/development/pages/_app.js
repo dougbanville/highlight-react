@@ -14,7 +14,7 @@ __webpack_require__.r(__webpack_exports__);
 //https://reacttricks.com/sharing-global-data-in-next-with-custom-app-and-usecontext-hook/
 
 var AudioContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])({
-  //audioId: 0,
+  isPlaying: false,
   time: 0
 });
 /* harmony default export */ __webpack_exports__["default"] = (AudioContext);
@@ -30,14 +30,19 @@ var AudioContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return PlayButton; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_AudioContext__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/AudioContext */ "./components/AudioContext.js");
+
+
 
 
 
@@ -47,44 +52,80 @@ var _jsxFileName = "/Users/dougbanville/highlight-react/components/AudioPlayer.j
 
 
 
-var PlayButton =
+
+var AudioPlayer =
 /*#__PURE__*/
 function (_Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(PlayButton, _Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(AudioPlayer, _Component);
 
-  function PlayButton(props) {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, PlayButton);
+  function AudioPlayer() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, AudioPlayer);
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(PlayButton).call(this, props)); //this.listRef = React.createRef();
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(AudioPlayer).apply(this, arguments));
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(PlayButton, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(AudioPlayer, [{
     key: "render",
-    value: function render() {
+    value: function render(props) {
+      console.log(this.props);
       var audioPlayer = "<audio id=\"audioPlayer\" playsinline>\n    <source >\n</audio>";
-      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         dangerouslySetInnerHTML: {
           __html: audioPlayer
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 19
         },
         __self: this
       });
     }
-  }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      //this.openPlayer
-      console.log("hi ".concat(this.props.showPlaye));
-    }
+  }], [{
+    key: "getInitialProps",
+    value: function () {
+      var _getInitialProps = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+      /*#__PURE__*/
+      _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref) {
+        var req, url, response, data;
+        return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                req = _ref.req;
+                url = "https://radio.rte.ie/radio1highlights/wp-json/wp/v2/posts/";
+                _context.next = 4;
+                return fetch(url);
+
+              case 4:
+                response = _context.sent;
+                _context.next = 7;
+                return response.json();
+
+              case 7:
+                data = _context.sent;
+                console.log(data[0].rte_mp3_audio);
+                return _context.abrupt("return", data);
+
+              case 10:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      function getInitialProps(_x) {
+        return _getInitialProps.apply(this, arguments);
+      }
+
+      return getInitialProps;
+    }()
   }]);
 
-  return PlayButton;
-}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
+  return AudioPlayer;
+}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
 
-
+/* harmony default export */ __webpack_exports__["default"] = (AudioPlayer);
 
 /***/ }),
 
@@ -104,7 +145,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_AudioContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/AudioContext */ "./components/AudioContext.js");
 /* harmony import */ var _components_ToggleAudio__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ToggleAudio */ "./components/ToggleAudio.js");
 /* harmony import */ var _components_ProgressBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/ProgressBar */ "./components/ProgressBar.js");
+/* harmony import */ var _components_InitAudioContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/InitAudioContext */ "./components/InitAudioContext.js");
 var _jsxFileName = "/Users/dougbanville/highlight-react/components/AudioUi.js";
+
 
 
 
@@ -123,31 +166,43 @@ var AudioUi = function AudioUi() {
       time = _useContext.time,
       duration = _useContext.duration;
 
+  var _useContext2 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useContext"])(_components_InitAudioContext__WEBPACK_IMPORTED_MODULE_5__["default"]),
+      audioUrl = _useContext2.audioUrl;
+
   var percentage = function percentage(time, duration) {
     //return time;
     return Math.floor(time / duration * 100) + "%";
-  }; //const playerTime = localStorage.getItem("currentTime");
+  };
 
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+    var audio = document.getElementById("audioPlayer");
+    var firstAudio = document.getElementsByClassName("audioButton");
+    console.log(firstAudio[0].value);
+    var a = firstAudio[0].value;
+    var det = a.split(",");
+    console.log(det[0]), det[1];
+    audioPlayer.setAttribute("src", det[1]);
+  }, []); //const playerTime = localStorage.getItem("currentTime");
 
   if (ready) {
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "jsx-1518799237",
+      className: "jsx-2984582996" + " " + "audio-container",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 30
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "jsx-1518799237" + " " + "audio-ui",
+      className: "jsx-2984582996" + " " + "audio-ui",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 31
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ToggleAudio__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 32
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ProgressBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -155,26 +210,52 @@ var AudioUi = function AudioUi() {
       max: duration,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 33
       },
       __self: this
-    }), "my Audio! ", ready, " ", audioId, " ", time, " ", duration, " ", percentage(time, duration)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-      id: "1518799237",
+    }), "my Audio! ", audioUrl, " ", ready, " ", audioId, " ", time, " ", duration, " ", percentage(time, duration)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+      id: "2984582996",
       __self: this
-    }, ".audio-ui.jsx-1518799237{position:fixed;height:60px;background:indigo;color:white;top:0px;width:100%;max-height:60px;}progress.jsx-1518799237{width:100%;}.nudge.jsx-1518799237{height:60px;display:block;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kb3VnYmFudmlsbGUvaGlnaGxpZ2h0LXJlYWN0L2NvbXBvbmVudHMvQXVkaW9VaS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUF1QlcsQUFHOEIsQUFTSixBQUdDLFdBRmQsQ0FHZ0IsR0FaRixXQWFkLENBWm9CLGtCQUNOLFlBQ0osUUFDRyxXQUNLLGdCQUNsQiIsImZpbGUiOiIvVXNlcnMvZG91Z2JhbnZpbGxlL2hpZ2hsaWdodC1yZWFjdC9jb21wb25lbnRzL0F1ZGlvVWkuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VDb250ZXh0IH0gZnJvbSBcInJlYWN0XCI7XG5pbXBvcnQgQXVkaW9Db250ZXh0IGZyb20gXCIuLi9jb21wb25lbnRzL0F1ZGlvQ29udGV4dFwiO1xuaW1wb3J0IFRvZ2dsZUF1ZGlvIGZyb20gXCIuLi9jb21wb25lbnRzL1RvZ2dsZUF1ZGlvXCI7XG5pbXBvcnQgUHJvZ3Jlc3NCYXIgZnJvbSBcIi4uL2NvbXBvbmVudHMvUHJvZ3Jlc3NCYXJcIjtcblxuY29uc3QgQXVkaW9VaSA9ICgpID0+IHtcbiAgY29uc3QgeyByZWFkeSwgYXVkaW9JZCwgaXNQbGF5aW5nLCBwbGF5QXVkaW8sIHBhdXNlQXVkaW8sIHJlc3VtZUF1ZGlvLCB0aW1lLCBkdXJhdGlvbiB9ID0gdXNlQ29udGV4dChcbiAgICBBdWRpb0NvbnRleHRcbiAgKTtcbiAgY29uc3QgcGVyY2VudGFnZSA9ICh0aW1lLCBkdXJhdGlvbikgPT4ge1xuICAgIC8vcmV0dXJuIHRpbWU7XG4gICAgcmV0dXJuIE1hdGguZmxvb3IoKHRpbWUgLyBkdXJhdGlvbikgKiAxMDApICsgXCIlXCI7XG4gIH07XG4gIC8vY29uc3QgcGxheWVyVGltZSA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKFwiY3VycmVudFRpbWVcIik7XG4gIGlmIChyZWFkeSkge1xuICAgIHJldHVybiAoXG4gICAgICA8ZGl2PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImF1ZGlvLXVpXCI+XG4gICAgICAgICAgPFRvZ2dsZUF1ZGlvIC8+XG4gICAgICAgICAgPFByb2dyZXNzQmFyIHZhbHVlPXt0aW1lfSBtYXg9e2R1cmF0aW9ufSAvPlxuICAgICAgICAgIG15IEF1ZGlvISB7cmVhZHl9IHthdWRpb0lkfSB7dGltZX0ge2R1cmF0aW9ufSB7cGVyY2VudGFnZSh0aW1lLCBkdXJhdGlvbil9XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8c3R5bGUganN4PlxuICAgICAgICAgIHtgXG4gICAgICAgICAgICAuYXVkaW8tdWkge1xuICAgICAgICAgICAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgICAgICAgICAgIGhlaWdodDogNjBweDtcbiAgICAgICAgICAgICAgYmFja2dyb3VuZDogaW5kaWdvO1xuICAgICAgICAgICAgICBjb2xvcjogd2hpdGU7XG4gICAgICAgICAgICAgIHRvcDogMHB4O1xuICAgICAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICAgICAgbWF4LWhlaWdodDogNjBweDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIHByb2dyZXNzIHtcbiAgICAgICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAubnVkZ2Uge1xuICAgICAgICAgICAgICBoZWlnaHQ6IDYwcHg7XG4gICAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgICAgICAgfVxuICAgICAgICAgIGB9XG4gICAgICAgIDwvc3R5bGU+XG4gICAgICA8L2Rpdj5cbiAgICApO1xuICB9IGVsc2Uge1xuICAgIHJldHVybiA8ZGl2IGNsYXNzTmFtZT1cImF1ZGlvLXVpXCIgLz47XG4gIH1cbn07XG5leHBvcnQgZGVmYXVsdCBBdWRpb1VpO1xuIl19 */\n/*@ sourceURL=/Users/dougbanville/highlight-react/components/AudioUi.js */"));
+    }, ".audio-container.jsx-2984582996{margin:0;background:pink;height:90px;}.audio-ui.jsx-2984582996{position:fixed;height:60px;background:indigo;color:white;top:0px;width:100%;max-height:60px;}progress.jsx-2984582996{width:100%;}.nudge.jsx-2984582996{height:60px;display:block;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kb3VnYmFudmlsbGUvaGlnaGxpZ2h0LXJlYWN0L2NvbXBvbmVudHMvQXVkaW9VaS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFxQ1csQUFHd0IsQUFLTSxBQVNKLEFBR0MsU0FoQkksRUFjbEIsQ0FHZ0IsR0FaRixVQUpBLENBaUJkLENBWm9CLFVBSnBCLFFBS2MsWUFDSixRQUNHLFdBQ0ssZ0JBQ2xCIiwiZmlsZSI6Ii9Vc2Vycy9kb3VnYmFudmlsbGUvaGlnaGxpZ2h0LXJlYWN0L2NvbXBvbmVudHMvQXVkaW9VaS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHVzZUNvbnRleHQsIHVzZUVmZmVjdCB9IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IEF1ZGlvQ29udGV4dCBmcm9tIFwiLi4vY29tcG9uZW50cy9BdWRpb0NvbnRleHRcIjtcbmltcG9ydCBUb2dnbGVBdWRpbyBmcm9tIFwiLi4vY29tcG9uZW50cy9Ub2dnbGVBdWRpb1wiO1xuaW1wb3J0IFByb2dyZXNzQmFyIGZyb20gXCIuLi9jb21wb25lbnRzL1Byb2dyZXNzQmFyXCI7XG5pbXBvcnQgSW5pdEF1ZGlvQ29udGV4dCBmcm9tIFwiLi4vY29tcG9uZW50cy9Jbml0QXVkaW9Db250ZXh0XCI7XG5cbmNvbnN0IEF1ZGlvVWkgPSAoKSA9PiB7XG4gIGNvbnN0IHsgcmVhZHksIGF1ZGlvSWQsIGlzUGxheWluZywgcGxheUF1ZGlvLCBwYXVzZUF1ZGlvLCByZXN1bWVBdWRpbywgdGltZSwgZHVyYXRpb24gfSA9IHVzZUNvbnRleHQoXG4gICAgQXVkaW9Db250ZXh0XG4gICk7XG4gIGNvbnN0IHsgYXVkaW9VcmwgfSA9IHVzZUNvbnRleHQoSW5pdEF1ZGlvQ29udGV4dCk7XG4gIGNvbnN0IHBlcmNlbnRhZ2UgPSAodGltZSwgZHVyYXRpb24pID0+IHtcbiAgICAvL3JldHVybiB0aW1lO1xuICAgIHJldHVybiBNYXRoLmZsb29yKCh0aW1lIC8gZHVyYXRpb24pICogMTAwKSArIFwiJVwiO1xuICB9O1xuXG4gIHVzZUVmZmVjdCgoKSA9PiB7XG4gICAgbGV0IGF1ZGlvID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJhdWRpb1BsYXllclwiKTtcbiAgICBsZXQgZmlyc3RBdWRpbyA9IGRvY3VtZW50LmdldEVsZW1lbnRzQnlDbGFzc05hbWUoXCJhdWRpb0J1dHRvblwiKTtcbiAgICBjb25zb2xlLmxvZyhmaXJzdEF1ZGlvWzBdLnZhbHVlKTtcbiAgICBsZXQgYSA9IGZpcnN0QXVkaW9bMF0udmFsdWU7XG4gICAgbGV0IGRldCA9IGEuc3BsaXQoXCIsXCIpO1xuICAgIGNvbnNvbGUubG9nKGRldFswXSksIGRldFsxXTtcbiAgICBhdWRpb1BsYXllci5zZXRBdHRyaWJ1dGUoXCJzcmNcIiwgZGV0WzFdKTtcbiAgfSwgW10pO1xuXG4gIC8vY29uc3QgcGxheWVyVGltZSA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKFwiY3VycmVudFRpbWVcIik7XG4gIGlmIChyZWFkeSkge1xuICAgIHJldHVybiAoXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImF1ZGlvLWNvbnRhaW5lclwiPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImF1ZGlvLXVpXCI+XG4gICAgICAgICAgPFRvZ2dsZUF1ZGlvIC8+XG4gICAgICAgICAgPFByb2dyZXNzQmFyIHZhbHVlPXt0aW1lfSBtYXg9e2R1cmF0aW9ufSAvPlxuICAgICAgICAgIG15IEF1ZGlvISB7YXVkaW9Vcmx9IHtyZWFkeX0ge2F1ZGlvSWR9IHt0aW1lfSB7ZHVyYXRpb259IHtwZXJjZW50YWdlKHRpbWUsIGR1cmF0aW9uKX1cbiAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgPHN0eWxlIGpzeD5cbiAgICAgICAgICB7YFxuICAgICAgICAgICAgLmF1ZGlvLWNvbnRhaW5lciB7XG4gICAgICAgICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgICAgICAgYmFja2dyb3VuZDogcGluaztcbiAgICAgICAgICAgICAgaGVpZ2h0OiA5MHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgLmF1ZGlvLXVpIHtcbiAgICAgICAgICAgICAgcG9zaXRpb246IGZpeGVkO1xuICAgICAgICAgICAgICBoZWlnaHQ6IDYwcHg7XG4gICAgICAgICAgICAgIGJhY2tncm91bmQ6IGluZGlnbztcbiAgICAgICAgICAgICAgY29sb3I6IHdoaXRlO1xuICAgICAgICAgICAgICB0b3A6IDBweDtcbiAgICAgICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgICAgIG1heC1oZWlnaHQ6IDYwcHg7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBwcm9ncmVzcyB7XG4gICAgICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgLm51ZGdlIHtcbiAgICAgICAgICAgICAgaGVpZ2h0OiA2MHB4O1xuICAgICAgICAgICAgICBkaXNwbGF5OiBibG9jaztcbiAgICAgICAgICAgIH1cbiAgICAgICAgICBgfVxuICAgICAgICA8L3N0eWxlPlxuICAgICAgPC9kaXY+XG4gICAgKTtcbiAgfSBlbHNlIHtcbiAgICByZXR1cm4gKFxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJhdWRpby1jb250YWluZXJcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJhdWRpby11aVwiPlBsYXkgQWxsPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICApO1xuICB9XG59O1xuZXhwb3J0IGRlZmF1bHQgQXVkaW9VaTtcbiJdfQ== */\n/*@ sourceURL=/Users/dougbanville/highlight-react/components/AudioUi.js */"));
   } else {
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "audio-container",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 66
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "audio-ui",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 67
       },
       __self: this
-    });
+    }, "Play All"));
   }
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AudioUi);
+
+/***/ }),
+
+/***/ "./components/InitAudioContext.js":
+/*!****************************************!*\
+  !*** ./components/InitAudioContext.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var InitAudioContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])({
+  audioUrl: "nowt"
+});
+/* harmony default export */ __webpack_exports__["default"] = (InitAudioContext);
 
 /***/ }),
 
@@ -10397,6 +10478,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_AudioUi__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/AudioUi */ "./components/AudioUi.js");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _components_InitAudioContext__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/InitAudioContext */ "./components/InitAudioContext.js");
 
 
 
@@ -10408,6 +10490,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/Users/dougbanville/highlight-react/pages/_app.js";
+
 
 
 
@@ -10436,9 +10519,9 @@ function (_App) {
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_9__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this), "state", {
       showPlayer: false,
       audioRefId: null,
-      isPlaying: "false",
       audioPlayer: null,
-      ready: false
+      ready: false,
+      isPlaying: false
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_9__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this), "componentDidMount", function () {
@@ -10463,9 +10546,15 @@ function (_App) {
         }
 
         _this.setState({
-          isPlaying: true,
+          //isPlaying: true,
           time: Number(a.srcElement.currentTime),
           duration: Number(duration)
+        });
+      };
+
+      audioPlayer.onplay = function () {
+        _this.setState({
+          isPlaying: true
         });
       };
 
@@ -10495,8 +10584,11 @@ function (_App) {
         isPlaying: true
       });
 
-      next_router__WEBPACK_IMPORTED_MODULE_15___default.a.push("/?biong");
       audioPlayer.play();
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_9__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this), "setIntialAudio", function (audio) {
+      console.log(audio.target.value);
     });
 
     return _this;
@@ -10523,7 +10615,7 @@ function (_App) {
       return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_11__["Container"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 100
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_AudioContext__WEBPACK_IMPORTED_MODULE_12__["default"].Provider, {
@@ -10540,30 +10632,38 @@ function (_App) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 101
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 114
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_AudioPlayer__WEBPACK_IMPORTED_MODULE_13__["default"], {
+      })), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_InitAudioContext__WEBPACK_IMPORTED_MODULE_16__["default"].Provider, {
+        value: {
+          audioUrl: "ttttt",
+          audioId: 0
+        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 115
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_AudioPlayer__WEBPACK_IMPORTED_MODULE_13__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 116
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_AudioUi__WEBPACK_IMPORTED_MODULE_14__["default"], {
-        audioId: this.state.audioId,
-        showPlayer: this.state.showPlayer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 118
         },
         __self: this
-      })));
+      }))));
     }
   }], [{
     key: "getInitialProps",

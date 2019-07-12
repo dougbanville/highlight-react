@@ -38,7 +38,11 @@ const Blog = ({ router, blog, posts }) => {
         <meta property="og:type" content="article" key="ogtype" />
         <meta property="og:title" content={blog.title.rendered} key="ogtitle" />
         <meta property="og:description" content={blog.title.rendered} key="ogdesc" />
-        <meta property="og:url" content={`https://hacker-next.dougbanville.now.sh/blog/${blog.id}`} key="ogurl" />
+        <meta
+          property="og:url"
+          content={`https://hacker-next.dougbanville.now.sh/blog/${blog.id}`}
+          key="ogurl"
+        />
         <meta property="og:site_name" content="RTÉ Radio 1 Highlights" key="ogsite" />
         <meta property="og:image" content={image} key="ogimage" />
 
@@ -83,14 +87,12 @@ Blog.getInitialProps = async context => {
     posts = await postsResponse.json();
     data = await response.json();
   } catch (err) {
-    console.log(err);
     data = [];
     posts = [];
   }
   return {
     blog: data,
     posts: posts.filter(r => {
-      console.log(data);
       return r;
     })
   };

@@ -7,20 +7,25 @@ const AudioButton = ({ id, audioUrl }) => {
 
   if (id == audioId && isPlaying) {
     return (
-      <button className="button large secondary" onClick={pauseAudio}>
+      <button className="button large secondary audioButton" onClick={pauseAudio}>
         <i className="fas fa-pause" /> Pause {audioId}
       </button>
     );
   }
   if (id == audioId) {
     return (
-      <button className="button large secondary" onClick={resumeAudio}>
+      <button className="button large secondary audioButton" onClick={resumeAudio}>
         <i className="fas fa-play" /> Resume
       </button>
     );
   }
   return (
-    <button className="button large success" onClick={playAudio} value={datObj} dataaudio={audioUrl}>
+    <button
+      className="button large success audioButton"
+      onClick={playAudio}
+      value={datObj}
+      dataaudio={audioUrl}
+    >
       <i className="fas fa-play" /> Play
     </button>
   );

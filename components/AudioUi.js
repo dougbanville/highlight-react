@@ -1,27 +1,46 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import AudioContext from "../components/AudioContext";
 import ToggleAudio from "../components/ToggleAudio";
 import ProgressBar from "../components/ProgressBar";
+import InitAudioContext from "../components/InitAudioContext";
 
 const AudioUi = () => {
   const { ready, audioId, isPlaying, playAudio, pauseAudio, resumeAudio, time, duration } = useContext(
     AudioContext
   );
+  const { audioUrl } = useContext(InitAudioContext);
   const percentage = (time, duration) => {
     //return time;
     return Math.floor((time / duration) * 100) + "%";
   };
+
+  useEffect(() => {
+    let audio = document.getElementById("audioPlayer");
+    let firstAudio = document.getElementsByClassName("audioButton");
+    console.log(firstAudio[0].value);
+    let a = firstAudio[0].value;
+    let det = a.split(",");
+    console.log(det[0]), det[1];
+    audioPlayer.setAttribute("src", det[1]);
+  }, []);
+
   //const playerTime = localStorage.getItem("currentTime");
   if (ready) {
     return (
-      <div>
+      <div className="audio-container">
         <div className="audio-ui">
           <ToggleAudio />
           <ProgressBar value={time} max={duration} />
-          my Audio! {ready} {audioId} {time} {duration} {percentage(time, duration)}
+          my Audio! {audioUrl} {ready} {audioId} {time} {duration} {percentage(time, duration)}
         </div>
+
         <style jsx>
           {`
+            .audio-container {
+              margin: 0;
+              background: pink;
+              height: 90px;
+            }
             .audio-ui {
               position: fixed;
               height: 60px;
@@ -43,7 +62,11 @@ const AudioUi = () => {
       </div>
     );
   } else {
-    return <div className="audio-ui" />;
+    return (
+      <div className="audio-container">
+        <div className="audio-ui">Play All</div>
+      </div>
+    );
   }
 };
 export default AudioUi;

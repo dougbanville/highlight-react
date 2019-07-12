@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { withRouter } from "next/router";
 import Router from "next/router";
 import Link from "next/link";
@@ -8,6 +8,8 @@ import fetch from "isomorphic-fetch";
 import ReactHtmlParser from "react-html-parser";
 import AudioButton from "../components/AudioButton";
 import PostDetail from "../components/PostDetail";
+import AudioContext from "../components/AudioContext";
+import InitAudioContext from "../components/InitAudioContext";
 
 const Index = ({ data }) => {
   const [value, setValue] = useState({
@@ -17,6 +19,8 @@ const Index = ({ data }) => {
   });
 
   const { text, audioId, audioPlaying } = value;
+
+  const { isPlaying, setIntialAudio } = useContext(AudioContext);
 
   const handleChange = name => e => {
     //setSearchQuery(e.target.value);
@@ -54,9 +58,11 @@ const Index = ({ data }) => {
       <Head>
         <title>Highlights</title>
       </Head>
+      <div className="hidden">{data[0].rte_mp3_audio}</div>
       <div className="grid-container">
         <div className="grid-x grid-margin-x">
           <div className="medium-12">{searchForm()}</div>
+          <div className="medium-12" />
         </div>
       </div>
 

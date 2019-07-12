@@ -2,7 +2,7 @@
 import { createContext } from "react";
 
 const AudioContext = createContext({
-  //audioId: 0,
+  isPlaying: false,
   time: 0
 });
 

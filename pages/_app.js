@@ -4,14 +4,15 @@ import AudioContext from "../components/AudioContext";
 import AudioPlayer from "../components/AudioPlayer";
 import AudioUi from "../components/AudioUi";
 import Router from "next/router";
+import InitAudioContext from "../components/InitAudioContext";
 
 class MyApp extends App {
   state = {
     showPlayer: false,
     audioRefId: null,
-    isPlaying: "false",
     audioPlayer: null,
-    ready: false
+    ready: false,
+    isPlaying: false
   };
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
@@ -42,9 +43,14 @@ class MyApp extends App {
         duration = Number(a.srcElement.duration);
       }
       this.setState({
-        isPlaying: true,
+        //isPlaying: true,
         time: Number(a.srcElement.currentTime),
         duration: Number(duration)
+      });
+    };
+    audioPlayer.onplay = () => {
+      this.setState({
+        isPlaying: true
       });
     };
     audioPlayer.onpause = () => {
@@ -71,7 +77,6 @@ class MyApp extends App {
       audioId: audioId,
       isPlaying: true
     });
-    Router.push("/?biong");
     audioPlayer.play();
   };
   pauseAudio() {
@@ -84,6 +89,9 @@ class MyApp extends App {
 
     audioPlayer.play();
   }
+  setIntialAudio = audio => {
+    console.log(audio.target.value);
+  };
 
   render() {
     const { Component, pageProps } = this.props;
@@ -104,9 +112,11 @@ class MyApp extends App {
           }}
         >
           <Component {...pageProps} />
+          <InitAudioContext.Provider value={{ audioUrl: "ttttt", audioId: 0 }}>
+            <AudioPlayer />
 
-          <AudioPlayer />
-          <AudioUi audioId={this.state.audioId} showPlayer={this.state.showPlayer} />
+            <AudioUi />
+          </InitAudioContext.Provider>
         </AudioContext.Provider>
       </Container>
     );

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Nav = () => {
   return (
-    <div className="my-nav">
+    <div className="my-nav-container">
       <div className="grid-container my-nav">
         <div className="grid-x grid-margin-x">
           <div className="cell small-6 ">
@@ -35,6 +35,9 @@ const Nav = () => {
       <style jsx>{`
         .my-nav {
           background: rgb(85, 156, 206);
+        }
+        .my-nav-container {
+          margin-top: 60px;
         }
         img {
           max-width: 200px;

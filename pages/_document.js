@@ -1,6 +1,8 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { useState } from "react";
+import AudioUi from "../components/AudioUi";
 import AudioPlayer from "../components/AudioPlayer";
+import AudioContext from "../components/AudioContext";
 
 class MyDocument extends Document {
   render() {
