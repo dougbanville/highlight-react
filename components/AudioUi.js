@@ -5,9 +5,7 @@ import ProgressBar from "../components/ProgressBar";
 import InitAudioContext from "../components/InitAudioContext";
 
 const AudioUi = () => {
-  const { ready, audioId, isPlaying, playAudio, pauseAudio, resumeAudio, time, duration } = useContext(
-    AudioContext
-  );
+  const { ready, audioId, isPlaying, playAudio, pauseAudio, resumeAudio, time, duration } = useContext(AudioContext);
   const { audioUrl } = useContext(InitAudioContext);
   const percentage = (time, duration) => {
     //return time;
@@ -29,22 +27,22 @@ const AudioUi = () => {
     return (
       <div className="audio-container">
         <div className="audio-ui">
-          <ToggleAudio />
-          <ProgressBar value={time} max={duration} />
-          my Audio! {audioUrl} {ready} {audioId} {time} {duration} {percentage(time, duration)}
+          <div className="grid-container">
+            <div className="grid-x grid-margin-x">
+              <div className="small-12">
+                <ToggleAudio />
+                <ProgressBar value={time} max={duration} />
+              </div>
+            </div>
+          </div>
         </div>
 
         <style jsx>
           {`
-            .audio-container {
-              margin: 0;
-              background: pink;
-              height: 90px;
-            }
             .audio-ui {
               position: fixed;
               height: 60px;
-              background: indigo;
+              background: rgba(0, 0, 0, 0.9);
               color: white;
               top: 0px;
               width: 100%;

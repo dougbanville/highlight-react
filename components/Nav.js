@@ -7,7 +7,9 @@ const Nav = () => {
       <div className="grid-container my-nav">
         <div className="grid-x grid-margin-x">
           <div className="cell small-6 ">
-            <img src="https://radio.rte.ie/radio1highlights/wp-content/uploads/sites/3/2016/08/Radio1_landscape-1.png" />
+            <Link href="/">
+              <img src="https://radio.rte.ie/radio1highlights/wp-content/uploads/sites/3/2016/08/Radio1_landscape-1.png" />
+            </Link>
           </div>
           <div className="cell small-6">
             <div className="my-nav">
@@ -17,22 +19,15 @@ const Nav = () => {
                     <a>Home</a>
                   </Link>
                 </li>
-                <li>
-                  <Link href="/about">
-                    <a>About</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/blogs">
-                    <a>Blogs</a>
-                  </Link>
-                </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
       <style jsx>{`
+        img {
+          cursor: pointer;
+        }
         .my-nav {
           background: rgb(85, 156, 206);
         }

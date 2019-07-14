@@ -15,7 +15,7 @@ const PostDetail = ({ post, full }) => {
   }
   return (
     <div>
-      <PostImage image={image} postId={post.id} />
+      <PostImage image={image} postId={post.id} post={post} />
       <div className="entry-wrap">
         <Link as={`/blog/${post.id}`} href={`/blog/?id=${post.id}`}>
           <div>

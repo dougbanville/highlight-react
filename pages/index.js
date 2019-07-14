@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { withRouter } from "next/router";
 import Router from "next/router";
 import Link from "next/link";
@@ -53,12 +53,16 @@ const Index = ({ data }) => {
 
   const [playerStatus, setPlayerStatus] = useState("player");
 
+  useEffect(() => {
+    if (!isPlaying) {
+      console.log(`set source here?`);
+    }
+  }, []);
   return (
     <Layout title="Index" footer={`Copyright ${new Date().getFullYear()}`}>
       <Head>
         <title>Highlights</title>
       </Head>
-      <div className="hidden">{data[0].rte_mp3_audio}</div>
       <div className="grid-container">
         <div className="grid-x grid-margin-x">
           <div className="medium-12">{searchForm()}</div>

@@ -141,7 +141,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/dougbanville/highlight-react/components/AudioPlayer.js";
+var _jsxFileName = "/Users/dougbanville/hacker-next/components/AudioPlayer.js";
 
 
 
@@ -239,7 +239,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_ToggleAudio__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ToggleAudio */ "./components/ToggleAudio.js");
 /* harmony import */ var _components_ProgressBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/ProgressBar */ "./components/ProgressBar.js");
 /* harmony import */ var _components_InitAudioContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/InitAudioContext */ "./components/InitAudioContext.js");
-var _jsxFileName = "/Users/dougbanville/highlight-react/components/AudioUi.js";
+var _jsxFileName = "/Users/dougbanville/hacker-next/components/AudioUi.js";
 
 
 
@@ -279,23 +279,44 @@ var AudioUi = function AudioUi() {
 
   if (ready) {
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "jsx-2984582996" + " " + "audio-container",
+      className: "jsx-505850615" + " " + "audio-container",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "jsx-505850615" + " " + "audio-ui",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "jsx-505850615" + " " + "grid-container",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 30
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "jsx-2984582996" + " " + "audio-ui",
+      className: "jsx-505850615" + " " + "grid-x grid-margin-x",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 31
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ToggleAudio__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "jsx-505850615" + " " + "small-12",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 32
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ToggleAudio__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ProgressBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -303,26 +324,26 @@ var AudioUi = function AudioUi() {
       max: duration,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 34
       },
       __self: this
-    }), "my Audio! ", audioUrl, " ", ready, " ", audioId, " ", time, " ", duration, " ", percentage(time, duration)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-      id: "2984582996",
+    }))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+      id: "505850615",
       __self: this
-    }, ".audio-container.jsx-2984582996{margin:0;background:pink;height:90px;}.audio-ui.jsx-2984582996{position:fixed;height:60px;background:indigo;color:white;top:0px;width:100%;max-height:60px;}progress.jsx-2984582996{width:100%;}.nudge.jsx-2984582996{height:60px;display:block;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kb3VnYmFudmlsbGUvaGlnaGxpZ2h0LXJlYWN0L2NvbXBvbmVudHMvQXVkaW9VaS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFxQ1csQUFHd0IsQUFLTSxBQVNKLEFBR0MsU0FoQkksRUFjbEIsQ0FHZ0IsR0FaRixVQUpBLENBaUJkLENBWm9CLFVBSnBCLFFBS2MsWUFDSixRQUNHLFdBQ0ssZ0JBQ2xCIiwiZmlsZSI6Ii9Vc2Vycy9kb3VnYmFudmlsbGUvaGlnaGxpZ2h0LXJlYWN0L2NvbXBvbmVudHMvQXVkaW9VaS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHVzZUNvbnRleHQsIHVzZUVmZmVjdCB9IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IEF1ZGlvQ29udGV4dCBmcm9tIFwiLi4vY29tcG9uZW50cy9BdWRpb0NvbnRleHRcIjtcbmltcG9ydCBUb2dnbGVBdWRpbyBmcm9tIFwiLi4vY29tcG9uZW50cy9Ub2dnbGVBdWRpb1wiO1xuaW1wb3J0IFByb2dyZXNzQmFyIGZyb20gXCIuLi9jb21wb25lbnRzL1Byb2dyZXNzQmFyXCI7XG5pbXBvcnQgSW5pdEF1ZGlvQ29udGV4dCBmcm9tIFwiLi4vY29tcG9uZW50cy9Jbml0QXVkaW9Db250ZXh0XCI7XG5cbmNvbnN0IEF1ZGlvVWkgPSAoKSA9PiB7XG4gIGNvbnN0IHsgcmVhZHksIGF1ZGlvSWQsIGlzUGxheWluZywgcGxheUF1ZGlvLCBwYXVzZUF1ZGlvLCByZXN1bWVBdWRpbywgdGltZSwgZHVyYXRpb24gfSA9IHVzZUNvbnRleHQoXG4gICAgQXVkaW9Db250ZXh0XG4gICk7XG4gIGNvbnN0IHsgYXVkaW9VcmwgfSA9IHVzZUNvbnRleHQoSW5pdEF1ZGlvQ29udGV4dCk7XG4gIGNvbnN0IHBlcmNlbnRhZ2UgPSAodGltZSwgZHVyYXRpb24pID0+IHtcbiAgICAvL3JldHVybiB0aW1lO1xuICAgIHJldHVybiBNYXRoLmZsb29yKCh0aW1lIC8gZHVyYXRpb24pICogMTAwKSArIFwiJVwiO1xuICB9O1xuXG4gIHVzZUVmZmVjdCgoKSA9PiB7XG4gICAgbGV0IGF1ZGlvID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJhdWRpb1BsYXllclwiKTtcbiAgICBsZXQgZmlyc3RBdWRpbyA9IGRvY3VtZW50LmdldEVsZW1lbnRzQnlDbGFzc05hbWUoXCJhdWRpb0J1dHRvblwiKTtcbiAgICBjb25zb2xlLmxvZyhmaXJzdEF1ZGlvWzBdLnZhbHVlKTtcbiAgICBsZXQgYSA9IGZpcnN0QXVkaW9bMF0udmFsdWU7XG4gICAgbGV0IGRldCA9IGEuc3BsaXQoXCIsXCIpO1xuICAgIGNvbnNvbGUubG9nKGRldFswXSksIGRldFsxXTtcbiAgICBhdWRpb1BsYXllci5zZXRBdHRyaWJ1dGUoXCJzcmNcIiwgZGV0WzFdKTtcbiAgfSwgW10pO1xuXG4gIC8vY29uc3QgcGxheWVyVGltZSA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKFwiY3VycmVudFRpbWVcIik7XG4gIGlmIChyZWFkeSkge1xuICAgIHJldHVybiAoXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImF1ZGlvLWNvbnRhaW5lclwiPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImF1ZGlvLXVpXCI+XG4gICAgICAgICAgPFRvZ2dsZUF1ZGlvIC8+XG4gICAgICAgICAgPFByb2dyZXNzQmFyIHZhbHVlPXt0aW1lfSBtYXg9e2R1cmF0aW9ufSAvPlxuICAgICAgICAgIG15IEF1ZGlvISB7YXVkaW9Vcmx9IHtyZWFkeX0ge2F1ZGlvSWR9IHt0aW1lfSB7ZHVyYXRpb259IHtwZXJjZW50YWdlKHRpbWUsIGR1cmF0aW9uKX1cbiAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgPHN0eWxlIGpzeD5cbiAgICAgICAgICB7YFxuICAgICAgICAgICAgLmF1ZGlvLWNvbnRhaW5lciB7XG4gICAgICAgICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgICAgICAgYmFja2dyb3VuZDogcGluaztcbiAgICAgICAgICAgICAgaGVpZ2h0OiA5MHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgLmF1ZGlvLXVpIHtcbiAgICAgICAgICAgICAgcG9zaXRpb246IGZpeGVkO1xuICAgICAgICAgICAgICBoZWlnaHQ6IDYwcHg7XG4gICAgICAgICAgICAgIGJhY2tncm91bmQ6IGluZGlnbztcbiAgICAgICAgICAgICAgY29sb3I6IHdoaXRlO1xuICAgICAgICAgICAgICB0b3A6IDBweDtcbiAgICAgICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgICAgIG1heC1oZWlnaHQ6IDYwcHg7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBwcm9ncmVzcyB7XG4gICAgICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgLm51ZGdlIHtcbiAgICAgICAgICAgICAgaGVpZ2h0OiA2MHB4O1xuICAgICAgICAgICAgICBkaXNwbGF5OiBibG9jaztcbiAgICAgICAgICAgIH1cbiAgICAgICAgICBgfVxuICAgICAgICA8L3N0eWxlPlxuICAgICAgPC9kaXY+XG4gICAgKTtcbiAgfSBlbHNlIHtcbiAgICByZXR1cm4gKFxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJhdWRpby1jb250YWluZXJcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJhdWRpby11aVwiPlBsYXkgQWxsPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICApO1xuICB9XG59O1xuZXhwb3J0IGRlZmF1bHQgQXVkaW9VaTtcbiJdfQ== */\n/*@ sourceURL=/Users/dougbanville/highlight-react/components/AudioUi.js */"));
+    }, ".audio-ui.jsx-505850615{position:fixed;height:60px;background:rgba(0,0,0,0.9);color:white;top:0px;width:100%;max-height:60px;}progress.jsx-505850615{width:100%;}.nudge.jsx-505850615{height:60px;display:block;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kb3VnYmFudmlsbGUvaGFja2VyLW5leHQvY29tcG9uZW50cy9BdWRpb1VpLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXdDVyxBQUc4QixBQVNKLEFBR0MsV0FGZCxDQUdnQixHQVpGLFdBYWQsQ0FaZ0MsMkJBQ2xCLFlBQ0osUUFDRyxXQUNLLGdCQUNsQiIsImZpbGUiOiIvVXNlcnMvZG91Z2JhbnZpbGxlL2hhY2tlci1uZXh0L2NvbXBvbmVudHMvQXVkaW9VaS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHVzZUNvbnRleHQsIHVzZUVmZmVjdCB9IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IEF1ZGlvQ29udGV4dCBmcm9tIFwiLi4vY29tcG9uZW50cy9BdWRpb0NvbnRleHRcIjtcbmltcG9ydCBUb2dnbGVBdWRpbyBmcm9tIFwiLi4vY29tcG9uZW50cy9Ub2dnbGVBdWRpb1wiO1xuaW1wb3J0IFByb2dyZXNzQmFyIGZyb20gXCIuLi9jb21wb25lbnRzL1Byb2dyZXNzQmFyXCI7XG5pbXBvcnQgSW5pdEF1ZGlvQ29udGV4dCBmcm9tIFwiLi4vY29tcG9uZW50cy9Jbml0QXVkaW9Db250ZXh0XCI7XG5cbmNvbnN0IEF1ZGlvVWkgPSAoKSA9PiB7XG4gIGNvbnN0IHsgcmVhZHksIGF1ZGlvSWQsIGlzUGxheWluZywgcGxheUF1ZGlvLCBwYXVzZUF1ZGlvLCByZXN1bWVBdWRpbywgdGltZSwgZHVyYXRpb24gfSA9IHVzZUNvbnRleHQoQXVkaW9Db250ZXh0KTtcbiAgY29uc3QgeyBhdWRpb1VybCB9ID0gdXNlQ29udGV4dChJbml0QXVkaW9Db250ZXh0KTtcbiAgY29uc3QgcGVyY2VudGFnZSA9ICh0aW1lLCBkdXJhdGlvbikgPT4ge1xuICAgIC8vcmV0dXJuIHRpbWU7XG4gICAgcmV0dXJuIE1hdGguZmxvb3IoKHRpbWUgLyBkdXJhdGlvbikgKiAxMDApICsgXCIlXCI7XG4gIH07XG5cbiAgdXNlRWZmZWN0KCgpID0+IHtcbiAgICBsZXQgYXVkaW8gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImF1ZGlvUGxheWVyXCIpO1xuICAgIGxldCBmaXJzdEF1ZGlvID0gZG9jdW1lbnQuZ2V0RWxlbWVudHNCeUNsYXNzTmFtZShcImF1ZGlvQnV0dG9uXCIpO1xuICAgIGNvbnNvbGUubG9nKGZpcnN0QXVkaW9bMF0udmFsdWUpO1xuICAgIGxldCBhID0gZmlyc3RBdWRpb1swXS52YWx1ZTtcbiAgICBsZXQgZGV0ID0gYS5zcGxpdChcIixcIik7XG4gICAgY29uc29sZS5sb2coZGV0WzBdKSwgZGV0WzFdO1xuICAgIGF1ZGlvUGxheWVyLnNldEF0dHJpYnV0ZShcInNyY1wiLCBkZXRbMV0pO1xuICB9LCBbXSk7XG5cbiAgLy9jb25zdCBwbGF5ZXJUaW1lID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oXCJjdXJyZW50VGltZVwiKTtcbiAgaWYgKHJlYWR5KSB7XG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYXVkaW8tY29udGFpbmVyXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYXVkaW8tdWlcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQtY29udGFpbmVyXCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQteCBncmlkLW1hcmdpbi14XCI+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwic21hbGwtMTJcIj5cbiAgICAgICAgICAgICAgICA8VG9nZ2xlQXVkaW8gLz5cbiAgICAgICAgICAgICAgICA8UHJvZ3Jlc3NCYXIgdmFsdWU9e3RpbWV9IG1heD17ZHVyYXRpb259IC8+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuXG4gICAgICAgIDxzdHlsZSBqc3g+XG4gICAgICAgICAge2BcbiAgICAgICAgICAgIC5hdWRpby11aSB7XG4gICAgICAgICAgICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICAgICAgICAgICAgaGVpZ2h0OiA2MHB4O1xuICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuOSk7XG4gICAgICAgICAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgICAgICAgICAgdG9wOiAwcHg7XG4gICAgICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgICAgICBtYXgtaGVpZ2h0OiA2MHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgcHJvZ3Jlc3Mge1xuICAgICAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5udWRnZSB7XG4gICAgICAgICAgICAgIGhlaWdodDogNjBweDtcbiAgICAgICAgICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgYH1cbiAgICAgICAgPC9zdHlsZT5cbiAgICAgIDwvZGl2PlxuICAgICk7XG4gIH0gZWxzZSB7XG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYXVkaW8tY29udGFpbmVyXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYXVkaW8tdWlcIj5QbGF5IEFsbDwvZGl2PlxuICAgICAgPC9kaXY+XG4gICAgKTtcbiAgfVxufTtcbmV4cG9ydCBkZWZhdWx0IEF1ZGlvVWk7XG4iXX0= */\n/*@ sourceURL=/Users/dougbanville/hacker-next/components/AudioUi.js */"));
   } else {
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "audio-container",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66
+        lineNumber: 64
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "audio-ui",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67
+        lineNumber: 65
       },
       __self: this
     }, "Play All"));
@@ -364,7 +385,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_AudioContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/AudioContext */ "./components/AudioContext.js");
-var _jsxFileName = "/Users/dougbanville/highlight-react/components/ProgressBar.js";
+var _jsxFileName = "/Users/dougbanville/hacker-next/components/ProgressBar.js";
 
 
 
@@ -386,15 +407,15 @@ var ProgressBar = function ProgressBar() {
       max: duration,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 9
+        lineNumber: 7
       },
       __self: this
     });
   } else {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("progress", {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 9
       },
       __self: this
     });
@@ -417,7 +438,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_AudioContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/AudioContext */ "./components/AudioContext.js");
-var _jsxFileName = "/Users/dougbanville/highlight-react/components/ToggleAudio.js";
+var _jsxFileName = "/Users/dougbanville/hacker-next/components/ToggleAudio.js";
 
 
 
@@ -439,34 +460,34 @@ var ToggleAudio = function ToggleAudio() {
       onClick: pauseAudio,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 8
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "fas fa-pause",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 9
       },
       __self: this
-    }), " Toggle");
+    }), " Pause");
   } else {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "button",
       onClick: resumeAudio,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 14
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "fas fa-play",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 15
       },
       __self: this
-    }), " Toggle");
+    }), " Play");
   }
 };
 
@@ -2562,7 +2583,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/dougbanville/highlight-react/pages/_document.js";
+var _jsxFileName = "/Users/dougbanville/hacker-next/pages/_document.js";
 
 
 
