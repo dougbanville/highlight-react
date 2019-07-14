@@ -31,10 +31,10 @@ const AudioUi = () => {
             <div className="grid-x grid-margin-x">
               <div className="small-12">
                 <ToggleAudio />
-                <ProgressBar value={time} max={duration} />
               </div>
             </div>
           </div>
+          <ProgressBar value={time} max={duration} />
         </div>
 
         <style jsx>

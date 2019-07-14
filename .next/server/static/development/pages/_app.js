@@ -319,18 +319,18 @@ var AudioUi = function AudioUi() {
         lineNumber: 33
       },
       __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ProgressBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ProgressBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
       value: time,
       max: duration,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 37
       },
       __self: this
-    }))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+    })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
       id: "505850615",
       __self: this
-    }, ".audio-ui.jsx-505850615{position:fixed;height:60px;background:rgba(0,0,0,0.9);color:white;top:0px;width:100%;max-height:60px;}progress.jsx-505850615{width:100%;}.nudge.jsx-505850615{height:60px;display:block;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kb3VnYmFudmlsbGUvaGFja2VyLW5leHQvY29tcG9uZW50cy9BdWRpb1VpLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXdDVyxBQUc4QixBQVNKLEFBR0MsV0FGZCxDQUdnQixHQVpGLFdBYWQsQ0FaZ0MsMkJBQ2xCLFlBQ0osUUFDRyxXQUNLLGdCQUNsQiIsImZpbGUiOiIvVXNlcnMvZG91Z2JhbnZpbGxlL2hhY2tlci1uZXh0L2NvbXBvbmVudHMvQXVkaW9VaS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHVzZUNvbnRleHQsIHVzZUVmZmVjdCB9IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IEF1ZGlvQ29udGV4dCBmcm9tIFwiLi4vY29tcG9uZW50cy9BdWRpb0NvbnRleHRcIjtcbmltcG9ydCBUb2dnbGVBdWRpbyBmcm9tIFwiLi4vY29tcG9uZW50cy9Ub2dnbGVBdWRpb1wiO1xuaW1wb3J0IFByb2dyZXNzQmFyIGZyb20gXCIuLi9jb21wb25lbnRzL1Byb2dyZXNzQmFyXCI7XG5pbXBvcnQgSW5pdEF1ZGlvQ29udGV4dCBmcm9tIFwiLi4vY29tcG9uZW50cy9Jbml0QXVkaW9Db250ZXh0XCI7XG5cbmNvbnN0IEF1ZGlvVWkgPSAoKSA9PiB7XG4gIGNvbnN0IHsgcmVhZHksIGF1ZGlvSWQsIGlzUGxheWluZywgcGxheUF1ZGlvLCBwYXVzZUF1ZGlvLCByZXN1bWVBdWRpbywgdGltZSwgZHVyYXRpb24gfSA9IHVzZUNvbnRleHQoQXVkaW9Db250ZXh0KTtcbiAgY29uc3QgeyBhdWRpb1VybCB9ID0gdXNlQ29udGV4dChJbml0QXVkaW9Db250ZXh0KTtcbiAgY29uc3QgcGVyY2VudGFnZSA9ICh0aW1lLCBkdXJhdGlvbikgPT4ge1xuICAgIC8vcmV0dXJuIHRpbWU7XG4gICAgcmV0dXJuIE1hdGguZmxvb3IoKHRpbWUgLyBkdXJhdGlvbikgKiAxMDApICsgXCIlXCI7XG4gIH07XG5cbiAgdXNlRWZmZWN0KCgpID0+IHtcbiAgICBsZXQgYXVkaW8gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImF1ZGlvUGxheWVyXCIpO1xuICAgIGxldCBmaXJzdEF1ZGlvID0gZG9jdW1lbnQuZ2V0RWxlbWVudHNCeUNsYXNzTmFtZShcImF1ZGlvQnV0dG9uXCIpO1xuICAgIGNvbnNvbGUubG9nKGZpcnN0QXVkaW9bMF0udmFsdWUpO1xuICAgIGxldCBhID0gZmlyc3RBdWRpb1swXS52YWx1ZTtcbiAgICBsZXQgZGV0ID0gYS5zcGxpdChcIixcIik7XG4gICAgY29uc29sZS5sb2coZGV0WzBdKSwgZGV0WzFdO1xuICAgIGF1ZGlvUGxheWVyLnNldEF0dHJpYnV0ZShcInNyY1wiLCBkZXRbMV0pO1xuICB9LCBbXSk7XG5cbiAgLy9jb25zdCBwbGF5ZXJUaW1lID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oXCJjdXJyZW50VGltZVwiKTtcbiAgaWYgKHJlYWR5KSB7XG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYXVkaW8tY29udGFpbmVyXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYXVkaW8tdWlcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQtY29udGFpbmVyXCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQteCBncmlkLW1hcmdpbi14XCI+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwic21hbGwtMTJcIj5cbiAgICAgICAgICAgICAgICA8VG9nZ2xlQXVkaW8gLz5cbiAgICAgICAgICAgICAgICA8UHJvZ3Jlc3NCYXIgdmFsdWU9e3RpbWV9IG1heD17ZHVyYXRpb259IC8+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuXG4gICAgICAgIDxzdHlsZSBqc3g+XG4gICAgICAgICAge2BcbiAgICAgICAgICAgIC5hdWRpby11aSB7XG4gICAgICAgICAgICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICAgICAgICAgICAgaGVpZ2h0OiA2MHB4O1xuICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuOSk7XG4gICAgICAgICAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgICAgICAgICAgdG9wOiAwcHg7XG4gICAgICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgICAgICBtYXgtaGVpZ2h0OiA2MHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgcHJvZ3Jlc3Mge1xuICAgICAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5udWRnZSB7XG4gICAgICAgICAgICAgIGhlaWdodDogNjBweDtcbiAgICAgICAgICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgYH1cbiAgICAgICAgPC9zdHlsZT5cbiAgICAgIDwvZGl2PlxuICAgICk7XG4gIH0gZWxzZSB7XG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYXVkaW8tY29udGFpbmVyXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYXVkaW8tdWlcIj5QbGF5IEFsbDwvZGl2PlxuICAgICAgPC9kaXY+XG4gICAgKTtcbiAgfVxufTtcbmV4cG9ydCBkZWZhdWx0IEF1ZGlvVWk7XG4iXX0= */\n/*@ sourceURL=/Users/dougbanville/hacker-next/components/AudioUi.js */"));
+    }, ".audio-ui.jsx-505850615{position:fixed;height:60px;background:rgba(0,0,0,0.9);color:white;top:0px;width:100%;max-height:60px;}progress.jsx-505850615{width:100%;}.nudge.jsx-505850615{height:60px;display:block;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kb3VnYmFudmlsbGUvaGFja2VyLW5leHQvY29tcG9uZW50cy9BdWRpb1VpLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXdDVyxBQUc4QixBQVNKLEFBR0MsV0FGZCxDQUdnQixHQVpGLFdBYWQsQ0FaZ0MsMkJBQ2xCLFlBQ0osUUFDRyxXQUNLLGdCQUNsQiIsImZpbGUiOiIvVXNlcnMvZG91Z2JhbnZpbGxlL2hhY2tlci1uZXh0L2NvbXBvbmVudHMvQXVkaW9VaS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHVzZUNvbnRleHQsIHVzZUVmZmVjdCB9IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IEF1ZGlvQ29udGV4dCBmcm9tIFwiLi4vY29tcG9uZW50cy9BdWRpb0NvbnRleHRcIjtcbmltcG9ydCBUb2dnbGVBdWRpbyBmcm9tIFwiLi4vY29tcG9uZW50cy9Ub2dnbGVBdWRpb1wiO1xuaW1wb3J0IFByb2dyZXNzQmFyIGZyb20gXCIuLi9jb21wb25lbnRzL1Byb2dyZXNzQmFyXCI7XG5pbXBvcnQgSW5pdEF1ZGlvQ29udGV4dCBmcm9tIFwiLi4vY29tcG9uZW50cy9Jbml0QXVkaW9Db250ZXh0XCI7XG5cbmNvbnN0IEF1ZGlvVWkgPSAoKSA9PiB7XG4gIGNvbnN0IHsgcmVhZHksIGF1ZGlvSWQsIGlzUGxheWluZywgcGxheUF1ZGlvLCBwYXVzZUF1ZGlvLCByZXN1bWVBdWRpbywgdGltZSwgZHVyYXRpb24gfSA9IHVzZUNvbnRleHQoQXVkaW9Db250ZXh0KTtcbiAgY29uc3QgeyBhdWRpb1VybCB9ID0gdXNlQ29udGV4dChJbml0QXVkaW9Db250ZXh0KTtcbiAgY29uc3QgcGVyY2VudGFnZSA9ICh0aW1lLCBkdXJhdGlvbikgPT4ge1xuICAgIC8vcmV0dXJuIHRpbWU7XG4gICAgcmV0dXJuIE1hdGguZmxvb3IoKHRpbWUgLyBkdXJhdGlvbikgKiAxMDApICsgXCIlXCI7XG4gIH07XG5cbiAgdXNlRWZmZWN0KCgpID0+IHtcbiAgICBsZXQgYXVkaW8gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImF1ZGlvUGxheWVyXCIpO1xuICAgIGxldCBmaXJzdEF1ZGlvID0gZG9jdW1lbnQuZ2V0RWxlbWVudHNCeUNsYXNzTmFtZShcImF1ZGlvQnV0dG9uXCIpO1xuICAgIGNvbnNvbGUubG9nKGZpcnN0QXVkaW9bMF0udmFsdWUpO1xuICAgIGxldCBhID0gZmlyc3RBdWRpb1swXS52YWx1ZTtcbiAgICBsZXQgZGV0ID0gYS5zcGxpdChcIixcIik7XG4gICAgY29uc29sZS5sb2coZGV0WzBdKSwgZGV0WzFdO1xuICAgIGF1ZGlvUGxheWVyLnNldEF0dHJpYnV0ZShcInNyY1wiLCBkZXRbMV0pO1xuICB9LCBbXSk7XG5cbiAgLy9jb25zdCBwbGF5ZXJUaW1lID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oXCJjdXJyZW50VGltZVwiKTtcbiAgaWYgKHJlYWR5KSB7XG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYXVkaW8tY29udGFpbmVyXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYXVkaW8tdWlcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQtY29udGFpbmVyXCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQteCBncmlkLW1hcmdpbi14XCI+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwic21hbGwtMTJcIj5cbiAgICAgICAgICAgICAgICA8VG9nZ2xlQXVkaW8gLz5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8UHJvZ3Jlc3NCYXIgdmFsdWU9e3RpbWV9IG1heD17ZHVyYXRpb259IC8+XG4gICAgICAgIDwvZGl2PlxuXG4gICAgICAgIDxzdHlsZSBqc3g+XG4gICAgICAgICAge2BcbiAgICAgICAgICAgIC5hdWRpby11aSB7XG4gICAgICAgICAgICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICAgICAgICAgICAgaGVpZ2h0OiA2MHB4O1xuICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuOSk7XG4gICAgICAgICAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgICAgICAgICAgdG9wOiAwcHg7XG4gICAgICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgICAgICBtYXgtaGVpZ2h0OiA2MHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgcHJvZ3Jlc3Mge1xuICAgICAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC5udWRnZSB7XG4gICAgICAgICAgICAgIGhlaWdodDogNjBweDtcbiAgICAgICAgICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgYH1cbiAgICAgICAgPC9zdHlsZT5cbiAgICAgIDwvZGl2PlxuICAgICk7XG4gIH0gZWxzZSB7XG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYXVkaW8tY29udGFpbmVyXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYXVkaW8tdWlcIj5QbGF5IEFsbDwvZGl2PlxuICAgICAgPC9kaXY+XG4gICAgKTtcbiAgfVxufTtcbmV4cG9ydCBkZWZhdWx0IEF1ZGlvVWk7XG4iXX0= */\n/*@ sourceURL=/Users/dougbanville/hacker-next/components/AudioUi.js */"));
   } else {
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "audio-container",
@@ -382,16 +382,19 @@ var InitAudioContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_AudioContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/AudioContext */ "./components/AudioContext.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_AudioContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/AudioContext */ "./components/AudioContext.js");
 var _jsxFileName = "/Users/dougbanville/hacker-next/components/ProgressBar.js";
 
 
 
+ //https://developer.mozilla.org/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player#Progress
 
 var ProgressBar = function ProgressBar() {
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_components_AudioContext__WEBPACK_IMPORTED_MODULE_1__["default"]),
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_1__["useContext"])(_components_AudioContext__WEBPACK_IMPORTED_MODULE_2__["default"]),
       ready = _useContext.ready,
       audioId = _useContext.audioId,
       isPlaying = _useContext.isPlaying,
@@ -401,21 +404,56 @@ var ProgressBar = function ProgressBar() {
       time = _useContext.time,
       duration = _useContext.duration;
 
+  var percent = function percent(time, duration) {
+    return Math.floor(time / duration * 100);
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+    if (!isNaN(duration)) {
+      var progress = document.getElementById("progress");
+      progress.addEventListener("click", function (e) {
+        var pos = (e.pageX - this.offsetLeft) / this.offsetWidth; //alert(pos);
+        //video.currentTime = pos * video.duration;
+
+        var audio = document.getElementById("audioPlayer");
+        audio.currentTime = pos * audio.duration;
+        console.log(pos);
+      });
+    }
+  });
+
   if (!isNaN(duration)) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("progress", {
-      value: time,
-      max: duration,
+    var percentage = percent(time, duration);
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      id: "progress",
+      role: "progressbar",
+      tabindex: "0",
+      "aria-valuenow": "0",
+      "aria-valuemin": "0",
+      "aria-valuemax": "100",
+      className: styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a.dynamic([["2985544580", [percentage]]]) + " " + "progress",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 7
+        lineNumber: 29
       },
       __self: this
-    });
-  } else {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a.dynamic([["2985544580", [percentage]]]) + " " + "progress-meter",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 9
+        lineNumber: 38
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+      id: "2985544580",
+      dynamic: [percentage],
+      __self: this
+    }, ".progress-meter.__jsx-style-dynamic-selector{width:".concat(percentage, "%;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9kb3VnYmFudmlsbGUvaGFja2VyLW5leHQvY29tcG9uZW50cy9Qcm9ncmVzc0Jhci5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFzQ29CLEFBR2lELG9DQUN0QyIsImZpbGUiOiIvVXNlcnMvZG91Z2JhbnZpbGxlL2hhY2tlci1uZXh0L2NvbXBvbmVudHMvUHJvZ3Jlc3NCYXIuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VDb250ZXh0LCB1c2VFZmZlY3QgfSBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCBBdWRpb0NvbnRleHQgZnJvbSBcIi4uL2NvbXBvbmVudHMvQXVkaW9Db250ZXh0XCI7XG4vL2h0dHBzOi8vZGV2ZWxvcGVyLm1vemlsbGEub3JnL2VuLVVTL2RvY3MvV2ViL0d1aWRlL0F1ZGlvX2FuZF92aWRlb19kZWxpdmVyeS9jcm9zc19icm93c2VyX3ZpZGVvX3BsYXllciNQcm9ncmVzc1xuY29uc3QgUHJvZ3Jlc3NCYXIgPSAoKSA9PiB7XG4gIGNvbnN0IHsgcmVhZHksIGF1ZGlvSWQsIGlzUGxheWluZywgcGxheUF1ZGlvLCBwYXVzZUF1ZGlvLCByZXN1bWVBdWRpbywgdGltZSwgZHVyYXRpb24gfSA9IHVzZUNvbnRleHQoQXVkaW9Db250ZXh0KTtcblxuICBjb25zdCBwZXJjZW50ID0gKHRpbWUsIGR1cmF0aW9uKSA9PiB7XG4gICAgcmV0dXJuIE1hdGguZmxvb3IoKHRpbWUgLyBkdXJhdGlvbikgKiAxMDApO1xuICB9O1xuXG4gIHVzZUVmZmVjdCgoKSA9PiB7XG4gICAgaWYgKCFpc05hTihkdXJhdGlvbikpIHtcbiAgICAgIGxldCBwcm9ncmVzcyA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKFwicHJvZ3Jlc3NcIik7XG5cbiAgICAgIHByb2dyZXNzLmFkZEV2ZW50TGlzdGVuZXIoXCJjbGlja1wiLCBmdW5jdGlvbihlKSB7XG4gICAgICAgIGxldCBwb3MgPSAoZS5wYWdlWCAtIHRoaXMub2Zmc2V0TGVmdCkgLyB0aGlzLm9mZnNldFdpZHRoO1xuICAgICAgICAvL2FsZXJ0KHBvcyk7XG4gICAgICAgIC8vdmlkZW8uY3VycmVudFRpbWUgPSBwb3MgKiB2aWRlby5kdXJhdGlvbjtcbiAgICAgICAgbGV0IGF1ZGlvID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJhdWRpb1BsYXllclwiKTtcbiAgICAgICAgYXVkaW8uY3VycmVudFRpbWUgPSBwb3MgKiBhdWRpby5kdXJhdGlvbjtcbiAgICAgICAgY29uc29sZS5sb2cocG9zKTtcbiAgICAgIH0pO1xuICAgIH1cbiAgfSk7XG5cbiAgaWYgKCFpc05hTihkdXJhdGlvbikpIHtcbiAgICBsZXQgcGVyY2VudGFnZSA9IHBlcmNlbnQodGltZSwgZHVyYXRpb24pO1xuICAgIHJldHVybiAoXG4gICAgICA8ZGl2XG4gICAgICAgIGlkPVwicHJvZ3Jlc3NcIlxuICAgICAgICBjbGFzc05hbWU9XCJwcm9ncmVzc1wiXG4gICAgICAgIHJvbGU9XCJwcm9ncmVzc2JhclwiXG4gICAgICAgIHRhYmluZGV4PVwiMFwiXG4gICAgICAgIGFyaWEtdmFsdWVub3c9XCIwXCJcbiAgICAgICAgYXJpYS12YWx1ZW1pbj1cIjBcIlxuICAgICAgICBhcmlhLXZhbHVlbWF4PVwiMTAwXCJcbiAgICAgID5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJwcm9ncmVzcy1tZXRlclwiIC8+XG4gICAgICAgIDxzdHlsZSBqc3g+e2BcbiAgICAgICAgICAucHJvZ3Jlc3MtbWV0ZXIge1xuICAgICAgICAgICAgd2lkdGg6ICR7cGVyY2VudGFnZX0lO1xuICAgICAgICAgIH1cbiAgICAgICAgYH08L3N0eWxlPlxuICAgICAgPC9kaXY+XG4gICAgKTtcbiAgfSBlbHNlIHtcbiAgICByZXR1cm4gPGRpdiAvPjtcbiAgfVxufTtcblxuZXhwb3J0IGRlZmF1bHQgUHJvZ3Jlc3NCYXI7XG4iXX0= */\n/*@ sourceURL=/Users/dougbanville/hacker-next/components/ProgressBar.js */")));
+  } else {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47
       },
       __self: this
     });
