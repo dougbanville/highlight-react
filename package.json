@@ -16,7 +16,7 @@
     "isomorphic-fetch": "^2.2.1",
     "mediaelement": "^4.2.10",
     "moment": "^2.24.0",
-    "next": "^8.1.0",
+    "next": "^13.1.1",
     "openplayerjs": "^1.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
